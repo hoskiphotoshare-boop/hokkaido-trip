@@ -24,7 +24,7 @@ jobs:
           python-version: '3.10'
           
       - name: Install Dependencies
-        run: pip install requests beautifulsoup4 deep-translator
+        run: pip install requests beautifulsoup4
         
       - name: Run Aggregator Script
         run: python update_data.py
