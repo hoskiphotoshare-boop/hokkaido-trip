@@ -1,13 +1,14 @@
 {
-  "last_updated_utc": "2026-08-25T05:48:13.531587+00:00",
+  "last_updated_utc": "2026-08-25T05:51:00.469815+00:00",
   "currency": {
     "CAD_to_JPY": 114.98
   },
   "logistics": {
     "cts_airport_notices": "Normal operations. No emergency notices found.",
     "road_trip_status": {
-      "error": "API Status 404",
-      "details": "{\"error\":{\"code\":2010,\"message\":\"Could not find routable point within a radius of 350.0 meters of specified coordinate 1: 141.3413000 42.7561000.\"},\"info\":{\"engine\":{\"build_date\":\"2026-06-12T10:08:58Z\",\"graph_version\":\"4\",\"graph_date\":\"2026-08-11T23:09:33Z\",\"osm_date\":\"2026-08-03T00:00:02Z\",\"version\":\"9.9.0\"},\"timestamp\":1787636889922}}"
+      "normal_travel_time_mins": 375.0,
+      "total_distance_km": 460.8,
+      "note": "Open-source routing does not support real-time traffic delays."
     }
   },
   "mountain_safety": {
