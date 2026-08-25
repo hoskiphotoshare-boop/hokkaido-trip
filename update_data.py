@@ -51,16 +51,22 @@ def get_niseko_avalanche_bulletin():
         
         latest_post = soup.find('div', class_='entry-content') or soup.find('article')
         if latest_post:
-            # Grab the first few paragraphs (usually the core Japanese report)
+            # Grab the first few paragraphs (the core Japanese report)
             paragraphs = latest_post.find_all('p')
             text = " ".join([p.get_text(strip=True) for p in paragraphs[:4]])
             
-            # Translate the scraped Japanese text into English
+            # Attempt to translate the scraped text
             try:
                 translated_text = GoogleTranslator(source='auto', target='en').translate(text)
+                
+                # Catch Google's sneaky HTML error responses
+                if "Error 500" in translated_text or "That’s an error" in translated_text:
+                    return f"{text}\n\n(Note: Google Translate blocked the automated server. Displaying original Japanese.)"
+                    
                 return translated_text
-            except Exception as e:
-                return f"Translation failed: {text}\n(Error: {str(e)})"
+            except Exception:
+                # If the translation package fails entirely, fallback to Japanese
+                return f"{text}\n\n(Note: Translation failed. Displaying original Japanese.)"
                 
         return "Bulletin structure changed or not found."
     except Exception as e:
