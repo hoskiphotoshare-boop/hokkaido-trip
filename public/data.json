@@ -1,5 +1,5 @@
 {
-  "last_updated_utc": "2026-08-25T05:13:39.742272",
+  "last_updated_utc": "2026-08-25T05:40:25.504085",
   "currency": {
     "CAD_to_JPY": 114.98
   },
@@ -11,49 +11,49 @@
       "temp_celsius": 21.5,
       "recent_snowfall_cm": 0.0,
       "base_depth_cm": 0.0,
-      "wind_speed_kmh": 4.0
+      "wind_speed_kmh": 5.0
     },
     "Niseko Moiwa Ski Resort": {
       "temp_celsius": 21.5,
       "recent_snowfall_cm": 0.0,
       "base_depth_cm": 0.0,
-      "wind_speed_kmh": 4.0
+      "wind_speed_kmh": 5.0
     },
     "Rusutsu Resort": {
-      "temp_celsius": 21.7,
+      "temp_celsius": 22.1,
       "recent_snowfall_cm": 0.0,
       "base_depth_cm": 0.0,
-      "wind_speed_kmh": 5.9
+      "wind_speed_kmh": 6.3
     },
     "Kiroro Snow World": {
-      "temp_celsius": 20.0,
+      "temp_celsius": 19.5,
       "recent_snowfall_cm": 0.0,
       "base_depth_cm": 0.0,
-      "wind_speed_kmh": 11.1
+      "wind_speed_kmh": 11.7
     },
     "Kamui Ski Links": {
-      "temp_celsius": 18.2,
-      "recent_snowfall_cm": 0.0,
-      "base_depth_cm": 0.0,
-      "wind_speed_kmh": 11.5
-    },
-    "Furano Ski Resort": {
-      "temp_celsius": 15.1,
-      "recent_snowfall_cm": 0.0,
-      "base_depth_cm": 0.0,
-      "wind_speed_kmh": 6.8
-    },
-    "Sapporo Teine": {
       "temp_celsius": 18.8,
       "recent_snowfall_cm": 0.0,
       "base_depth_cm": 0.0,
-      "wind_speed_kmh": 5.0
+      "wind_speed_kmh": 12.3
     },
-    "Sapporo Kokusai": {
-      "temp_celsius": 19.7,
+    "Furano Ski Resort": {
+      "temp_celsius": 14.7,
       "recent_snowfall_cm": 0.0,
       "base_depth_cm": 0.0,
-      "wind_speed_kmh": 6.9
+      "wind_speed_kmh": 6.1
+    },
+    "Sapporo Teine": {
+      "temp_celsius": 19.0,
+      "recent_snowfall_cm": 0.0,
+      "base_depth_cm": 0.0,
+      "wind_speed_kmh": 2.9
+    },
+    "Sapporo Kokusai": {
+      "temp_celsius": 19.2,
+      "recent_snowfall_cm": 0.0,
+      "base_depth_cm": 0.0,
+      "wind_speed_kmh": 8.8
     }
   }
 }
