@@ -1,5 +1,5 @@
 {
-  "last_updated_utc": "2026-08-25T14:29:14.122627+00:00",
+  "last_updated_utc": "2026-08-25T17:45:34.876055+00:00",
   "currency": {
     "CAD_to_JPY": {
       "latest_rate": 114.89,
@@ -90,84 +90,84 @@
   },
   "resorts": {
     "Niseko Tokyu Grand Hirafu": {
-      "temp_celsius": 16.1,
+      "temp_celsius": 16.7,
       "24h_snowfall_cm": 0.0,
       "base_depth_cm": 0,
-      "wind_speed_kmh": 3.2,
-      "visibility_meters": 220.0,
-      "freezing_level_m": 4330.0,
-      "sunrise": "2026-08-25T04:54",
-      "sunset": "2026-08-25T18:24"
+      "wind_speed_kmh": 4.6,
+      "visibility_meters": 4540.0,
+      "freezing_level_m": 4180.0,
+      "sunrise": "2026-08-26T04:55",
+      "sunset": "2026-08-26T18:23"
     },
     "Niseko Moiwa Ski Resort": {
-      "temp_celsius": 16.1,
+      "temp_celsius": 16.7,
       "24h_snowfall_cm": 0.0,
       "base_depth_cm": 0,
-      "wind_speed_kmh": 3.2,
-      "visibility_meters": 220.0,
-      "freezing_level_m": 4340.0,
-      "sunrise": "2026-08-25T04:54",
-      "sunset": "2026-08-25T18:24"
+      "wind_speed_kmh": 4.6,
+      "visibility_meters": 4540.0,
+      "freezing_level_m": 4230.0,
+      "sunrise": "2026-08-26T04:55",
+      "sunset": "2026-08-26T18:23"
     },
     "Rusutsu Resort": {
-      "temp_celsius": 15.9,
+      "temp_celsius": 15.8,
       "24h_snowfall_cm": 0.0,
       "base_depth_cm": 0,
-      "wind_speed_kmh": 2.7,
-      "visibility_meters": 500.0,
-      "freezing_level_m": 4420.0,
-      "sunrise": "2026-08-25T04:53",
-      "sunset": "2026-08-25T18:23"
+      "wind_speed_kmh": 5.1,
+      "visibility_meters": 720.0,
+      "freezing_level_m": 4340.0,
+      "sunrise": "2026-08-26T04:54",
+      "sunset": "2026-08-26T18:22"
     },
     "Kiroro Snow World": {
-      "temp_celsius": 16.0,
+      "temp_celsius": 15.4,
       "24h_snowfall_cm": 0.0,
       "base_depth_cm": 0,
-      "wind_speed_kmh": 5.9,
-      "visibility_meters": 360.0,
-      "freezing_level_m": 4310.0,
-      "sunrise": "2026-08-25T04:52",
-      "sunset": "2026-08-25T18:24"
+      "wind_speed_kmh": 6.9,
+      "visibility_meters": 3520.0,
+      "freezing_level_m": 4120.0,
+      "sunrise": "2026-08-26T04:53",
+      "sunset": "2026-08-26T18:22"
     },
     "Kamui Ski Links": {
-      "temp_celsius": 14.9,
+      "temp_celsius": 14.2,
       "24h_snowfall_cm": 0.0,
       "base_depth_cm": 0,
-      "wind_speed_kmh": 4.5,
-      "visibility_meters": 31860.0,
-      "freezing_level_m": 4370.0,
-      "sunrise": "2026-08-25T04:46",
-      "sunset": "2026-08-25T18:19"
+      "wind_speed_kmh": 3.8,
+      "visibility_meters": 27260.0,
+      "freezing_level_m": 4130.0,
+      "sunrise": "2026-08-26T04:47",
+      "sunset": "2026-08-26T18:18"
     },
     "Furano Ski Resort": {
-      "temp_celsius": 12.2,
+      "temp_celsius": 11.7,
       "24h_snowfall_cm": 0.0,
       "base_depth_cm": 0,
-      "wind_speed_kmh": 4.0,
-      "visibility_meters": 280.0,
-      "freezing_level_m": 4420.0,
-      "sunrise": "2026-08-25T04:46",
-      "sunset": "2026-08-25T18:18"
+      "wind_speed_kmh": 3.1,
+      "visibility_meters": 300.0,
+      "freezing_level_m": 4250.0,
+      "sunrise": "2026-08-26T04:47",
+      "sunset": "2026-08-26T18:17"
     },
     "Sapporo Teine": {
-      "temp_celsius": 18.4,
+      "temp_celsius": 18.3,
       "24h_snowfall_cm": 0.0,
       "base_depth_cm": 0,
-      "wind_speed_kmh": 12.1,
-      "visibility_meters": 820.0,
-      "freezing_level_m": 4310.0,
-      "sunrise": "2026-08-25T04:51",
-      "sunset": "2026-08-25T18:23"
+      "wind_speed_kmh": 13.9,
+      "visibility_meters": 6360.0,
+      "freezing_level_m": 4120.0,
+      "sunrise": "2026-08-26T04:52",
+      "sunset": "2026-08-26T18:21"
     },
     "Sapporo Kokusai": {
-      "temp_celsius": 14.9,
+      "temp_celsius": 14.1,
       "24h_snowfall_cm": 0.0,
       "base_depth_cm": 0,
-      "wind_speed_kmh": 4.4,
-      "visibility_meters": 320.0,
-      "freezing_level_m": 4330.0,
-      "sunrise": "2026-08-25T04:52",
-      "sunset": "2026-08-25T18:23"
+      "wind_speed_kmh": 4.1,
+      "visibility_meters": 14580.0,
+      "freezing_level_m": 4140.0,
+      "sunrise": "2026-08-26T04:53",
+      "sunset": "2026-08-26T18:22"
     }
   }
 }
