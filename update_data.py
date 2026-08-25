@@ -102,17 +102,19 @@ def get_cad_jpy_exchange():
         return f"Error: {str(e)}"
 
 def get_road_conditions(api_key=None):
+    """Fetches segment-by-segment travel times and elevation data via OpenRouteService."""
     api_key = api_key or os.getenv("ORS_API_KEY")
+    
     if not api_key:
         return {"error": "ORS_API_KEY not found in environment variables."}
         
-    coordinates = [
-        [141.6811, 42.7875], # New Chitose Airport
-        [141.4033, 42.7738], # Lake Shikotsu Onsen
-        [140.7554, 42.9018], # Kutchan
-        [140.9947, 43.1907], # Otaru
-        [142.4633, 43.4079], # Nakafurano
-        [141.3545, 43.0618]  # Sapporo
+    waypoints = [
+        {"name": "New Chitose Airport", "coords": [141.6811, 42.7875]},
+        {"name": "Lake Shikotsu Onsen", "coords": [141.4033, 42.7738]},
+        {"name": "Kutchan", "coords": [140.7554, 42.9018]},
+        {"name": "Otaru", "coords": [140.9947, 43.1907]},
+        {"name": "Nakafurano", "coords": [142.4633, 43.4079]},
+        {"name": "Sapporo", "coords": [141.3545, 43.0618]}
     ]
     
     url = "https://api.openrouteservice.org/v2/directions/driving-car"
@@ -120,8 +122,10 @@ def get_road_conditions(api_key=None):
         "Authorization": api_key,
         "Content-Type": "application/json"
     }
+    
     payload = {
-        "coordinates": coordinates,
+        "coordinates": [wp["coords"] for wp in waypoints],
+        "elevation": True, # This enables 3D routing for ascent/descent metrics
         "instructions": False
     }
     
@@ -130,13 +134,25 @@ def get_road_conditions(api_key=None):
         if response.status_code != 200:
             return {"error": f"API Status {response.status_code}", "details": response.text}
             
-        data = response.json()
-        total_normal_mins = data["routes"][0]["summary"]["duration"] // 60
-        total_distance_km = data["routes"][0]["summary"]["distance"] / 1000
+        route = response.json()["routes"][0]
+        summary = route["summary"]
         
+        # Parse individual legs between waypoints
+        legs = []
+        for i, segment in enumerate(route.get("segments", [])):
+            legs.append({
+                "from": waypoints[i]["name"],
+                "to": waypoints[i+1]["name"],
+                "distance_km": round(segment["distance"] / 1000, 1),
+                "duration_mins": round(segment["duration"] / 60)
+            })
+            
         return {
-            "normal_travel_time_mins": total_normal_mins,
-            "total_distance_km": round(total_distance_km, 1),
+            "total_distance_km": round(summary["distance"] / 1000, 1),
+            "total_duration_mins": round(summary["duration"] / 60),
+            "total_ascent_m": round(summary.get("ascent", 0)),
+            "total_descent_m": round(summary.get("descent", 0)),
+            "legs": legs,
             "note": "Open-source routing does not support real-time traffic delays."
         }
     except Exception as e:
