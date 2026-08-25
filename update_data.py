@@ -136,15 +136,20 @@ def get_resort_news():
         response = requests.get(url, timeout=10)
         soup = BeautifulSoup(response.text, 'html.parser')
         
+        # Extract the first two paragraphs of the main report if available
         report_body = soup.find('div', class_='report-text') or soup.find('div', class_='snow-report-content')
+        
         if report_body:
             paragraphs = report_body.find_all('p')
             summary = " ".join([p.get_text(strip=True) for p in paragraphs[:2]])
             return summary if summary else "Report content is empty."
             
-        return "Latest resort news structure changed or not found."
+        # Fallback for Summer / Off-Season when the daily report elements are removed
+        return "Daily resort news is currently unavailable (likely due to the summer off-season)."
+        
     except Exception as e:
         return f"Failed to fetch resort news: {str(e)}"
+
 
 # --- PAYLOAD BUILDER ---
 
