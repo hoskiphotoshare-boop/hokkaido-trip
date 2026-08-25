@@ -73,9 +73,10 @@ def get_road_conditions(api_key=None):
         return {"error": "ORS_API_KEY not found in environment variables."}
         
     # Coordinates in [longitude, latitude] format
+    # Adjusted Lake Shikotsu from the lake's center to the Visitor Center on the shoreline
     coordinates = [
         [141.6811, 42.7875], # New Chitose Airport
-        [141.3413, 42.7561], # Lake Shikotsu
+        [141.4033, 42.7738], # Lake Shikotsu Onsen / Visitor Center
         [140.7554, 42.9018], # Kutchan
         [140.9947, 43.1907], # Otaru
         [142.4633, 43.4079], # Nakafurano
@@ -111,6 +112,7 @@ def get_road_conditions(api_key=None):
         }
     except Exception as e:
         return {"error": str(e)}
+
 
 def get_cts_disruptions():
     """Scrapes New Chitose Airport homepage for emergency alert banners."""
