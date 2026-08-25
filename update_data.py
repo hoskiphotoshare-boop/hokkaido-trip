@@ -112,13 +112,41 @@ def get_niseko_avalanche_bulletin():
         return f"Failed to fetch avalanche data: {str(e)}"
 
 def get_cad_jpy_exchange():
-    url = "https://api.exchangerate-api.com/v4/latest/CAD"
+    """Fetches the latest CAD to JPY exchange rate and a 7-day history for charting."""
+    # Calculate today's date and the date 7 days ago
+    end_date = datetime.now(timezone.utc).strftime('%Y-%m-%d')
+    start_date = (datetime.now(timezone.utc) - timedelta(days=7)).strftime('%Y-%m-%d')
+    
+    # Frankfurter API (Open-source, no API key required)
+    history_url = f"https://api.frankfurter.app/{start_date}..{end_date}?from=CAD&to=JPY"
+    latest_url = "https://api.frankfurter.app/latest?from=CAD&to=JPY"
+    
+    payload = {
+        "latest_rate": "N/A",
+        "7_day_history": []
+    }
+    
     try:
-        response = requests.get(url, timeout=10)
-        data = response.json()
-        return data.get("rates", {}).get("JPY", "N/A")
+        # Fetch the current instantaneous rate
+        latest_res = requests.get(latest_url, timeout=10)
+        if latest_res.status_code == 200:
+            payload["latest_rate"] = latest_res.json().get("rates", {}).get("JPY", "N/A")
+            
+        # Fetch the historical time-series data
+        history_res = requests.get(history_url, timeout=10)
+        if history_res.status_code == 200:
+            rates = history_res.json().get("rates", {})
+            
+            # Convert the nested JSON into a clean array of dictionaries for the frontend
+            for date, rate_data in rates.items():
+                payload["7_day_history"].append({
+                    "date": date,
+                    "rate": rate_data.get("JPY")
+                })
     except Exception as e:
-        return f"Error: {str(e)}"
+        payload["error"] = str(e)
+        
+    return payload
 
 def get_road_conditions(api_key=None):
     """Fetches segment-by-segment travel times and elevation data via OpenRouteService."""
