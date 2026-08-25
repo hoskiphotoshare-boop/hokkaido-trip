@@ -2,6 +2,7 @@ import json
 import requests
 from bs4 import BeautifulSoup
 from datetime import datetime
+from deep_translator import GoogleTranslator
 
 # 1. Master Ski Resort GPS Directory
 RESORTS = {
@@ -42,22 +43,29 @@ def get_weather_data():
     return weather_payload
 
 def get_niseko_avalanche_bulletin():
-    # Scrapes the daily bilingual bulletin from Niseko Avalanche Information
+    # Scrapes the daily bulletin from Niseko Avalanche Information
     url = "https://niseko.nadare.info/"
     try:
         response = requests.get(url)
         soup = BeautifulSoup(response.text, 'html.parser')
         
-        # The latest post is usually in the first main content block or article tag
         latest_post = soup.find('div', class_='entry-content') or soup.find('article')
         if latest_post:
-            # Grab the first few paragraphs to capture the English summary
+            # Grab the first few paragraphs (usually the core Japanese report)
             paragraphs = latest_post.find_all('p')
-            text = " ".join([p.get_text(strip=True) for p in paragraphs[:3]])
-            return text
+            text = " ".join([p.get_text(strip=True) for p in paragraphs[:4]])
+            
+            # Translate the scraped Japanese text into English
+            try:
+                translated_text = GoogleTranslator(source='auto', target='en').translate(text)
+                return translated_text
+            except Exception as e:
+                return f"Translation failed: {text}\n(Error: {str(e)})"
+                
         return "Bulletin structure changed or not found."
     except Exception as e:
         return f"Failed to fetch avalanche data: {str(e)}"
+
 
 def get_cad_jpy_exchange():
     # ExchangeRate-API Free Tier
