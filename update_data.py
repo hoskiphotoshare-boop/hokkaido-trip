@@ -32,9 +32,12 @@ def get_weather_data():
             hourly = data.get("hourly", {})
             daily = data.get("daily", {})
             
-            # Extract the latest hourly data points
-            snow_depth = hourly.get("snow_depth", [0])[-1] if hourly else 0
-            freezing_level = hourly.get("freezing_level_height", ["N/A"])[-1] if hourly else "N/A"
+            # Use [0] to get the current hour, not the end of the 7-day forecast
+            raw_snow_depth_meters = hourly.get("snow_depth", [0])[0] if hourly else 0
+	    snow_depth_cm = round(raw_snow_depth_meters * 100) # Convert meters to CM
+
+            # Fix freezing level to current hour as well
+            freezing_level = hourly.get("freezing_level_height", ["N/A"])[0] if hourly else "N/A"
             
             weather_payload[name] = {
                 "temp_celsius": current.get("temperature_2m", "N/A"),
