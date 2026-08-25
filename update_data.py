@@ -50,31 +50,36 @@ def get_weather_data():
     return weather_payload
 
 def get_jma_warnings():
-    """Scans the official JMA Hokkaido endpoint (Area 010000 - Entire Prefecture) for active weather warnings."""
-    # Changed from 016000 (Sapporo/Shiribeshi only) to 010000 (All of Hokkaido)
-    url = "https://www.jma.go.jp/bosai/warning/data/warning/010000.json"
+    """Scans the JMA endpoints for Sapporo/Shiribeshi (016000) and Kamikawa/Furano (012000)."""
+    # 010000 returns a 404 error, so we must query the sub-regions directly.
+    area_codes = ["016000", "012000"]
+    has_warnings = False
+    
     try:
-        response = requests.get(url, timeout=10)
-        data = response.json()
-        
-        has_warnings = False
-        
-        # Traverse the nested JMA JSON to look for active warning codes
-        if isinstance(data, dict) and "areaTypes" in data:
-            for area_type in data["areaTypes"]:
-                for area in area_type.get("areas", []):
-                    for warning in area.get("warnings", []):
-                        # Code "00" means normal/no warning. "解除" means a warning was just lifted.
-                        if warning.get("code") != "00" and warning.get("status") != "解除":
-                            has_warnings = True
-                            break
-                            
+        for code in area_codes:
+            url = f"https://www.jma.go.jp/bosai/warning/data/warning/{code}.json"
+            response = requests.get(url, timeout=10)
+            
+            # Silently skip if a region endpoint is down instead of crashing
+            if response.status_code != 200:
+                continue 
+                
+            data = response.json()
+            
+            if isinstance(data, dict) and "areaTypes" in data:
+                for area_type in data["areaTypes"]:
+                    for area in area_type.get("areas", []):
+                        for warning in area.get("warnings", []):
+                            # Code "00" means normal/no warning. "解除" means a warning was just lifted.
+                            if warning.get("code") != "00" and warning.get("status") != "解除":
+                                has_warnings = True
+                                break
+                                
         if has_warnings:
-            return "⚠️ ACTIVE WARNINGS: Severe weather advisories are currently in effect for Hokkaido. Please check the official JMA website before driving."
-        return "Normal. No active emergency warnings in Hokkaido."
+            return "⚠️ ACTIVE WARNINGS: Severe weather advisories are currently in effect for your route. Please check the official JMA website."
+        return "Normal. No active emergency warnings for your route."
     except Exception as e:
         return f"Failed to fetch JMA warnings: {str(e)}"
-
 
 # --- EXISTING FUNCTIONS ---
 
@@ -126,7 +131,7 @@ def get_road_conditions(api_key=None):
     
     payload = {
         "coordinates": [wp["coords"] for wp in waypoints],
-        "elevation": True, # This enables 3D routing for ascent/descent metrics
+        "elevation": True, 
         "instructions": True # Must be True to receive segment data
     }
     
@@ -145,7 +150,9 @@ def get_road_conditions(api_key=None):
                 "from": waypoints[i]["name"],
                 "to": waypoints[i+1]["name"],
                 "distance_km": round(segment["distance"] / 1000, 1),
-                "duration_mins": round(segment["duration"] / 60)
+                "duration_mins": round(segment["duration"] / 60),
+                "total_ascent_m": round(segment.get("ascent", 0)),
+                "total_descent_m": round(segment.get("descent", 0))
             })
             
         return {
