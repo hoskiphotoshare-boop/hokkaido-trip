@@ -27,6 +27,8 @@ jobs:
         run: pip install requests beautifulsoup4
         
       - name: Run Aggregator Script
+        env:
+          ORS_API_KEY: ${{ secrets.eyJvcmciOiI1YjNjZTM1OTc4NTExMTAwMDFjZjYyNDgiLCJpZCI6ImYyOTUzYzlmYmY3YjQwMmZiZGEzM2NlMmIzYTljOWQwIiwiaCI6Im11cm11cjY0In0= }}
         run: python update_data.py
         
       - name: Commit and Push JSON
