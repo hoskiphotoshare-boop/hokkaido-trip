@@ -2,7 +2,6 @@ import json
 import requests
 from bs4 import BeautifulSoup
 from datetime import datetime
-from deep_translator import GoogleTranslator
 
 # 1. Master Ski Resort GPS Directory
 RESORTS = {
@@ -43,31 +42,23 @@ def get_weather_data():
     return weather_payload
 
 def get_niseko_avalanche_bulletin():
-    # Scrapes the daily bulletin from Niseko Avalanche Information
+    # Scrapes the daily bilingual bulletin from Niseko Avalanche Information
     url = "https://niseko.nadare.info/"
     try:
         response = requests.get(url)
+        # Add a timeout so the Action doesn't hang
+        response.raise_for_status() 
         soup = BeautifulSoup(response.text, 'html.parser')
         
         latest_post = soup.find('div', class_='entry-content') or soup.find('article')
         if latest_post:
-            # Grab the first few paragraphs (the core Japanese report)
+            # Grab ALL paragraphs to ensure we capture the English section at the bottom
             paragraphs = latest_post.find_all('p')
-            text = " ".join([p.get_text(strip=True) for p in paragraphs[:4]])
             
-            # Attempt to translate the scraped text
-            try:
-                translated_text = GoogleTranslator(source='auto', target='en').translate(text)
-                
-                # Catch Google's sneaky HTML error responses
-                if "Error 500" in translated_text or "That’s an error" in translated_text:
-                    return f"{text}\n\n(Note: Google Translate blocked the automated server. Displaying original Japanese.)"
-                    
-                return translated_text
-            except Exception:
-                # If the translation package fails entirely, fallback to Japanese
-                return f"{text}\n\n(Note: Translation failed. Displaying original Japanese.)"
-                
+            # Join them with double line breaks for clean readability in your scrolling box
+            text = "\n\n".join([p.get_text(strip=True) for p in paragraphs if p.get_text(strip=True)])
+            return text
+            
         return "Bulletin structure changed or not found."
     except Exception as e:
         return f"Failed to fetch avalanche data: {str(e)}"
