@@ -1,5 +1,5 @@
 {
-  "last_updated_utc": "2026-08-25T06:37:25.980773+00:00",
+  "last_updated_utc": "2026-08-25T06:43:35.104748+00:00",
   "currency": {
     "CAD_to_JPY": 114.98
   },
@@ -22,7 +22,7 @@
       "recent_snowfall_cm": 0.0,
       "base_depth_cm": 0.0,
       "wind_speed_kmh": 7.7,
-      "visibility_meters": 3160.0,
+      "visibility_meters": 33400.0,
       "freezing_level_m": 4070.0,
       "sunrise": "2026-08-25T04:54",
       "sunset": "2026-08-25T18:24"
@@ -32,7 +32,7 @@
       "recent_snowfall_cm": 0.0,
       "base_depth_cm": 0.0,
       "wind_speed_kmh": 7.7,
-      "visibility_meters": 3160.0,
+      "visibility_meters": 33400.0,
       "freezing_level_m": 4070.0,
       "sunrise": "2026-08-25T04:54",
       "sunset": "2026-08-25T18:24"
@@ -42,7 +42,7 @@
       "recent_snowfall_cm": 0.0,
       "base_depth_cm": 0.0,
       "wind_speed_kmh": 3.9,
-      "visibility_meters": 6820.0,
+      "visibility_meters": 34100.0,
       "freezing_level_m": 4100.0,
       "sunrise": "2026-08-25T04:53",
       "sunset": "2026-08-25T18:23"
@@ -52,7 +52,7 @@
       "recent_snowfall_cm": 0.0,
       "base_depth_cm": 0.0,
       "wind_speed_kmh": 8.7,
-      "visibility_meters": 4100.0,
+      "visibility_meters": 10540.0,
       "freezing_level_m": 4030.0,
       "sunrise": "2026-08-25T04:52",
       "sunset": "2026-08-25T18:24"
@@ -62,7 +62,7 @@
       "recent_snowfall_cm": 0.0,
       "base_depth_cm": 0.0,
       "wind_speed_kmh": 12.9,
-      "visibility_meters": 30960.0,
+      "visibility_meters": 38340.0,
       "freezing_level_m": 3920.0,
       "sunrise": "2026-08-25T04:46",
       "sunset": "2026-08-25T18:19"
@@ -72,7 +72,7 @@
       "recent_snowfall_cm": 0.0,
       "base_depth_cm": 0.0,
       "wind_speed_kmh": 5.4,
-      "visibility_meters": 1620.0,
+      "visibility_meters": 11080.0,
       "freezing_level_m": 4020.0,
       "sunrise": "2026-08-25T04:46",
       "sunset": "2026-08-25T18:18"
@@ -82,7 +82,7 @@
       "recent_snowfall_cm": 0.0,
       "base_depth_cm": 0.0,
       "wind_speed_kmh": 4.6,
-      "visibility_meters": 3620.0,
+      "visibility_meters": 33800.0,
       "freezing_level_m": 4030.0,
       "sunrise": "2026-08-25T04:51",
       "sunset": "2026-08-25T18:23"
@@ -92,7 +92,7 @@
       "recent_snowfall_cm": 0.0,
       "base_depth_cm": 0.0,
       "wind_speed_kmh": 10.3,
-      "visibility_meters": 500.0,
+      "visibility_meters": 13600.0,
       "freezing_level_m": 4040.0,
       "sunrise": "2026-08-25T04:52",
       "sunset": "2026-08-25T18:23"
