@@ -30,4 +30,4 @@ jobs:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT }}'
           channelId: live
-          projectId: your-firebase-project-id # Replace with your actual Firebase project ID
+          projectId: hokkaido-2027 # Replace with your actual Firebase project ID
