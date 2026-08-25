@@ -1,59 +1,59 @@
 {
-  "last_updated_utc": "2026-08-25T04:50:23.296463",
+  "last_updated_utc": "2026-08-25T05:02:21.653802",
   "currency": {
     "CAD_to_JPY": 114.98
   },
   "mountain_safety": {
-    "niseko_avalanche_bulletin": "山麓+2度曇り　モイワ800m+2.0度北西3.8m　アンヌプリ1100m+0.1度西北西4.3m　ビレッジ1000m+1.1度西北西1.9m　ヒラフ花園1000m+0.7度北2.1m　花園800m+3.5度北1.3m　弁慶岬風よわく神威岬南南西8m気圧1016hPa波高不明、 海上、山ともにおだやか、観測とデータ評価から標高1000m鉱山の沢側壁、アンヌプリ大沢雪庇面の全層雪崩リスクは引き続き高い。谷底の滑走は控えるべき。雪は悪くない。ゲート開閉は未定、パトロールの指示に従うこと。この情報はコース外の雪崩事故防止を目的に出されている。しかし雪崩事故は減ったがそれ以外の事故はなかなか減らない。今シーズンも迷子や衝突、疾病による死亡事故が続いた。客が増える以上、それはやむを得ないことなのかもしれない。私たちはその日に予想されるリスクを呼び掛け、事故の可能性を少しでも減らす努力を続けている。 唐突だが私たちはそろそろ弱層の呪縛から解き放たれるべきではないのか。ヨーロッパで生まれ、日本に広まった弱層理論は果たして日本の雪崩事故防止に役だっただろうか。この40年、雪崩事故は起こり続けている。そして事故に遭う人の多くが雪崩の知識を得た人たちだ。私は何かが間違っていると思う。事故後に原因がわかっても死者は還らない。少なくとも主観に頼るピットチェックやショベルテストが事故防止に役立っているとはどうしても思えない。コシモザラメが本当に雪崩の原因だろうか。人は知識を求める。だから雪崩講習会は今も盛況だ。事故を防ぐための役に立つ教育が今こそ求められている。研究と教育を混同してはならない。以上はニセコ雪崩調査所の意見だ。ニセコ雪崩情報を終える。"
+    "niseko_avalanche_bulletin": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know."
   },
   "resorts": {
     "Niseko Tokyu Grand Hirafu": {
-      "temp_celsius": 21.3,
-      "recent_snowfall_cm": 0.0,
-      "base_depth_cm": 0.0,
-      "wind_speed_kmh": 3.9
-    },
-    "Niseko Moiwa Ski Resort": {
-      "temp_celsius": 21.3,
-      "recent_snowfall_cm": 0.0,
-      "base_depth_cm": 0.0,
-      "wind_speed_kmh": 3.9
-    },
-    "Rusutsu Resort": {
       "temp_celsius": 21.5,
       "recent_snowfall_cm": 0.0,
       "base_depth_cm": 0.0,
-      "wind_speed_kmh": 5.5
+      "wind_speed_kmh": 4.0
     },
-    "Kiroro Snow World": {
-      "temp_celsius": 19.9,
+    "Niseko Moiwa Ski Resort": {
+      "temp_celsius": 21.5,
       "recent_snowfall_cm": 0.0,
       "base_depth_cm": 0.0,
-      "wind_speed_kmh": 10.3
+      "wind_speed_kmh": 4.0
     },
-    "Kamui Ski Links": {
-      "temp_celsius": 18.0,
-      "recent_snowfall_cm": 0.0,
-      "base_depth_cm": 0.0,
-      "wind_speed_kmh": 10.6
-    },
-    "Furano Ski Resort": {
-      "temp_celsius": 15.3,
-      "recent_snowfall_cm": 0.0,
-      "base_depth_cm": 0.0,
-      "wind_speed_kmh": 7.1
-    },
-    "Sapporo Teine": {
-      "temp_celsius": 18.7,
-      "recent_snowfall_cm": 0.0,
-      "base_depth_cm": 0.0,
-      "wind_speed_kmh": 5.7
-    },
-    "Sapporo Kokusai": {
-      "temp_celsius": 19.8,
+    "Rusutsu Resort": {
+      "temp_celsius": 21.7,
       "recent_snowfall_cm": 0.0,
       "base_depth_cm": 0.0,
       "wind_speed_kmh": 5.9
+    },
+    "Kiroro Snow World": {
+      "temp_celsius": 20.0,
+      "recent_snowfall_cm": 0.0,
+      "base_depth_cm": 0.0,
+      "wind_speed_kmh": 11.1
+    },
+    "Kamui Ski Links": {
+      "temp_celsius": 18.2,
+      "recent_snowfall_cm": 0.0,
+      "base_depth_cm": 0.0,
+      "wind_speed_kmh": 11.5
+    },
+    "Furano Ski Resort": {
+      "temp_celsius": 15.1,
+      "recent_snowfall_cm": 0.0,
+      "base_depth_cm": 0.0,
+      "wind_speed_kmh": 6.8
+    },
+    "Sapporo Teine": {
+      "temp_celsius": 18.8,
+      "recent_snowfall_cm": 0.0,
+      "base_depth_cm": 0.0,
+      "wind_speed_kmh": 5.0
+    },
+    "Sapporo Kokusai": {
+      "temp_celsius": 19.7,
+      "recent_snowfall_cm": 0.0,
+      "base_depth_cm": 0.0,
+      "wind_speed_kmh": 6.9
     }
   }
 }
