@@ -1,7 +1,8 @@
 import json
 import requests
 from bs4 import BeautifulSoup
-from datetime import datetime
+from datetime import datetime, timezone
+import os
 
 # 1. Master Ski Resort GPS Directory
 RESORTS = {
@@ -15,17 +16,15 @@ RESORTS = {
     "Sapporo Kokusai": {"lat": 43.07, "lon": 141.07}
 }
 
+# --- EXISTING FUNCTIONS ---
+
 def get_weather_data():
     weather_payload = {}
     for name, coords in RESORTS.items():
-        # Open-Meteo Free API: Requires no key, excellent for topographical weather
         url = f"https://api.open-meteo.com/v1/forecast?latitude={coords['lat']}&longitude={coords['lon']}&current=temperature_2m,snowfall,wind_speed_10m&hourly=snow_depth&timezone=Asia%2FTokyo"
-        
         try:
-            response = requests.get(url)
+            response = requests.get(url, timeout=10)
             data = response.json()
-            
-            # Grab current weather and the latest hourly snow depth
             current = data.get("current", {})
             hourly = data.get("hourly", {})
             snow_depth = hourly.get("snow_depth", [0])[-1] if hourly else 0
@@ -38,41 +37,114 @@ def get_weather_data():
             }
         except Exception as e:
             weather_payload[name] = {"error": str(e)}
-            
     return weather_payload
 
 def get_niseko_avalanche_bulletin():
-    # Scrapes the daily bilingual bulletin from Niseko Avalanche Information
     url = "https://niseko.nadare.info/"
     try:
-        response = requests.get(url)
-        # Add a timeout so the Action doesn't hang
+        response = requests.get(url, timeout=10)
         response.raise_for_status() 
         soup = BeautifulSoup(response.text, 'html.parser')
-        
         latest_post = soup.find('div', class_='entry-content') or soup.find('article')
         if latest_post:
-            # Grab ALL paragraphs to ensure we capture the English section at the bottom
             paragraphs = latest_post.find_all('p')
-            
-            # Join them with double line breaks for clean readability in your scrolling box
             text = "\n\n".join([p.get_text(strip=True) for p in paragraphs if p.get_text(strip=True)])
             return text
-            
         return "Bulletin structure changed or not found."
     except Exception as e:
         return f"Failed to fetch avalanche data: {str(e)}"
 
-
 def get_cad_jpy_exchange():
-    # ExchangeRate-API Free Tier
     url = "https://api.exchangerate-api.com/v4/latest/CAD"
     try:
-        response = requests.get(url)
+        response = requests.get(url, timeout=10)
         data = response.json()
         return data.get("rates", {}).get("JPY", "N/A")
     except Exception as e:
         return f"Error: {str(e)}"
+
+# --- NEW FUNCTIONS ---
+
+def get_road_conditions(api_key=None):
+    """Fetches travel times using OpenRouteService (OpenStreetMap data)."""
+    api_key = api_key or os.getenv("ORS_API_KEY")
+    
+    if not api_key:
+        return {"error": "ORS_API_KEY not found in environment variables."}
+        
+    # Coordinates in [longitude, latitude] format
+    coordinates = [
+        [141.6811, 42.7875], # New Chitose Airport
+        [141.3413, 42.7561], # Lake Shikotsu
+        [140.7554, 42.9018], # Kutchan
+        [140.9947, 43.1907], # Otaru
+        [142.4633, 43.4079], # Nakafurano
+        [141.3545, 43.0618]  # Sapporo
+    ]
+    
+    url = "https://api.openrouteservice.org/v2/directions/driving-car"
+    
+    headers = {
+        "Authorization": api_key,
+        "Content-Type": "application/json"
+    }
+    
+    payload = {
+        "coordinates": coordinates,
+        "instructions": False
+    }
+    
+    try:
+        response = requests.post(url, headers=headers, json=payload, timeout=15)
+        
+        if response.status_code != 200:
+            return {"error": f"API Status {response.status_code}", "details": response.text}
+            
+        data = response.json()
+        total_normal_mins = data["routes"][0]["summary"]["duration"] // 60
+        total_distance_km = data["routes"][0]["summary"]["distance"] / 1000
+        
+        return {
+            "normal_travel_time_mins": total_normal_mins,
+            "total_distance_km": round(total_distance_km, 1),
+            "note": "Open-source routing does not support real-time traffic delays."
+        }
+    except Exception as e:
+        return {"error": str(e)}
+
+def get_cts_disruptions():
+    """Scrapes New Chitose Airport homepage for emergency alert banners."""
+    url = "https://www.new-chitose-airport.jp/en/"
+    try:
+        response = requests.get(url, timeout=10)
+        soup = BeautifulSoup(response.text, 'html.parser')
+        
+        alert = soup.find('div', class_='emergency') or soup.find('div', id='important_notice')
+        
+        if alert:
+            return alert.get_text(strip=True)
+        return "Normal operations. No emergency notices found."
+    except Exception as e:
+        return f"Failed to fetch airport status: {str(e)}"
+
+def get_resort_news():
+    """Scrapes SnowJapan's daily report for the latest headline/summary."""
+    url = "https://www.snowjapan.com/japan-daily-snow-weather-reports/Niseko-Now"
+    try:
+        response = requests.get(url, timeout=10)
+        soup = BeautifulSoup(response.text, 'html.parser')
+        
+        report_body = soup.find('div', class_='report-text') or soup.find('div', class_='snow-report-content')
+        if report_body:
+            paragraphs = report_body.find_all('p')
+            summary = " ".join([p.get_text(strip=True) for p in paragraphs[:2]])
+            return summary if summary else "Report content is empty."
+            
+        return "Latest resort news structure changed or not found."
+    except Exception as e:
+        return f"Failed to fetch resort news: {str(e)}"
+
+# --- PAYLOAD BUILDER ---
 
 def build_payload():
     print("Fetching weather...")
@@ -84,19 +156,31 @@ def build_payload():
     print("Fetching currency...")
     jpy_rate = get_cad_jpy_exchange()
     
+    print("Fetching road conditions...")
+    roads = get_road_conditions() 
+    
+    print("Fetching airport status...")
+    airport = get_cts_disruptions()
+    
+    print("Fetching resort news...")
+    news = get_resort_news()
+    
     final_payload = {
-        "last_updated_utc": datetime.utcnow().isoformat(),
+        "last_updated_utc": datetime.now(timezone.utc).isoformat(),
         "currency": {
             "CAD_to_JPY": jpy_rate
         },
+        "logistics": {
+            "cts_airport_notices": airport,
+            "road_trip_status": roads
+        },
         "mountain_safety": {
-            "niseko_avalanche_bulletin": safety
+            "niseko_avalanche_bulletin": safety,
+            "latest_resort_news": news
         },
         "resorts": weather
     }
     
-    # Write to a public folder for Firebase Hosting to read
-    import os
     os.makedirs('public', exist_ok=True)
     with open('public/data.json', 'w', encoding='utf-8') as f:
         json.dump(final_payload, f, ensure_ascii=False, indent=2)
