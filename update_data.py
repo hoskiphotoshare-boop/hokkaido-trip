@@ -126,7 +126,7 @@ def get_road_conditions(api_key=None):
     payload = {
         "coordinates": [wp["coords"] for wp in waypoints],
         "elevation": True, # This enables 3D routing for ascent/descent metrics
-        "instructions": False
+        "instructions": True # Must be True to receive segment data
     }
     
     try:
