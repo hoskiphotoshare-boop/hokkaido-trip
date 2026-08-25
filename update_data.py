@@ -1,7 +1,7 @@
 import json
 import requests
 from bs4 import BeautifulSoup
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 import os
 
 # 1. Master Ski Resort GPS Directory
