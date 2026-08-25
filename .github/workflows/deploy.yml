@@ -7,8 +7,13 @@ on:
   workflow_dispatch: # Allows you to click a button to run it manually
 
 jobs:
-  scrape_and_deploy:
+  scrape_and_commit:
     runs-on: ubuntu-latest
+    
+    # This permission is required for the bot to push the file back to your repo
+    permissions:
+      contents: write 
+      
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -23,15 +28,11 @@ jobs:
         
       - name: Run Aggregator Script
         run: python update_data.py
-
-      # ADD THIS NEW DEBUG STEP HERE:
-      - name: Verify File Generation
-        run: ls -la public/
         
-      - name: Deploy to Firebase Hosting
-        uses: FirebaseExtended/action-hosting-deploy@v0
-        with:
-          repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT }}'
-          channelId: live
-          projectId: hokkaido-2027 # Replace with your actual Firebase project ID
+      - name: Commit and Push JSON
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/data.json
+          git commit -m "Automated data sync: Update ski dashboard JSON" || echo "No changes to commit"
+          git push
