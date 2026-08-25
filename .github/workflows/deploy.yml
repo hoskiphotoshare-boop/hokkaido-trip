@@ -23,6 +23,10 @@ jobs:
         
       - name: Run Aggregator Script
         run: python update_data.py
+
+      # ADD THIS NEW DEBUG STEP HERE:
+      - name: Verify File Generation
+        run: ls -la public/
         
       - name: Deploy to Firebase Hosting
         uses: FirebaseExtended/action-hosting-deploy@v0
