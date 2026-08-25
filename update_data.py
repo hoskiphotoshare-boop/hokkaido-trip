@@ -42,7 +42,7 @@ def get_weather_data():
             weather_payload[name] = {
                 "temp_celsius": current.get("temperature_2m", "N/A"),
                 "recent_snowfall_cm": current.get("snowfall", "N/A"),
-                "base_depth_cm": snow_depth,
+                "base_depth_cm": snow_depth_cm,
                 "wind_speed_kmh": current.get("wind_speed_10m", "N/A"),
                 "visibility_meters": current.get("visibility", "N/A"),
                 "freezing_level_m": freezing_level,
