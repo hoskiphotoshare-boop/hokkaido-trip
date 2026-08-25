@@ -17,35 +17,31 @@ RESORTS = {
 }
 
 # --- NEW AND UPDATED FUNCTIONS ---
-
 def get_weather_data():
-    """Fetches weather, snow depth, visibility, freezing levels, and daylight hours."""
+    """Fetches real-time weather, 24-hour snowfall, visibility, freezing levels, and daylight hours."""
     weather_payload = {}
     for name, coords in RESORTS.items():
-        # Added visibility to current, freezing_level_height to hourly, and sunrise/sunset to daily
-        url = f"https://api.open-meteo.com/v1/forecast?latitude={coords['lat']}&longitude={coords['lon']}&current=temperature_2m,snowfall,wind_speed_10m,visibility&hourly=snow_depth,freezing_level_height&daily=sunrise,sunset&timezone=Asia%2FTokyo"
+        # MOVED: snow_depth and freezing_level_height to 'current'
+        # ADDED: snowfall_sum to 'daily' for the 24-hour total
+        url = f"https://api.open-meteo.com/v1/forecast?latitude={coords['lat']}&longitude={coords['lon']}&current=temperature_2m,snowfall,wind_speed_10m,visibility,snow_depth,freezing_level_height&daily=sunrise,sunset,snowfall_sum&timezone=Asia%2FTokyo"
         try:
             response = requests.get(url, timeout=10)
             data = response.json()
             
             current = data.get("current", {})
-            hourly = data.get("hourly", {})
             daily = data.get("daily", {})
             
-            # Use [0] to get the current hour, not the end of the 7-day forecast
-            raw_snow_depth_meters = hourly.get("snow_depth", [0])[0] if hourly else 0
-	    snow_depth_cm = round(raw_snow_depth_meters * 100) # Convert meters to CM
-
-            # Fix freezing level to current hour as well
-            freezing_level = hourly.get("freezing_level_height", ["N/A"])[0] if hourly else "N/A"
+            # Open-Meteo returns snow_depth in meters; convert to cm
+            raw_snow_depth_meters = current.get("snow_depth", 0)
+            snow_depth_cm = round(raw_snow_depth_meters * 100) if raw_snow_depth_meters else 0
             
             weather_payload[name] = {
                 "temp_celsius": current.get("temperature_2m", "N/A"),
-                "recent_snowfall_cm": current.get("snowfall", "N/A"),
+                "24h_snowfall_cm": daily.get("snowfall_sum", ["N/A"])[0] if daily else "N/A",
                 "base_depth_cm": snow_depth_cm,
                 "wind_speed_kmh": current.get("wind_speed_10m", "N/A"),
                 "visibility_meters": current.get("visibility", "N/A"),
-                "freezing_level_m": freezing_level,
+                "freezing_level_m": current.get("freezing_level_height", "N/A"),
                 "sunrise": daily.get("sunrise", ["N/A"])[0] if daily else "N/A",
                 "sunset": daily.get("sunset", ["N/A"])[0] if daily else "N/A"
             }
@@ -54,8 +50,9 @@ def get_weather_data():
     return weather_payload
 
 def get_jma_warnings():
-    """Scans the official JMA Hokkaido endpoint (Area 016000) for active weather warnings."""
-    url = "https://www.jma.go.jp/bosai/warning/data/warning/016000.json"
+    """Scans the official JMA Hokkaido endpoint (Area 010000 - Entire Prefecture) for active weather warnings."""
+    # Changed from 016000 (Sapporo/Shiribeshi only) to 010000 (All of Hokkaido)
+    url = "https://www.jma.go.jp/bosai/warning/data/warning/010000.json"
     try:
         response = requests.get(url, timeout=10)
         data = response.json()
@@ -77,6 +74,7 @@ def get_jma_warnings():
         return "Normal. No active emergency warnings in Hokkaido."
     except Exception as e:
         return f"Failed to fetch JMA warnings: {str(e)}"
+
 
 # --- EXISTING FUNCTIONS ---
 
