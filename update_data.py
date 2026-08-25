@@ -84,17 +84,30 @@ def get_jma_warnings():
 # --- EXISTING FUNCTIONS ---
 
 def get_niseko_avalanche_bulletin():
+    """Fetches the daily avalanche bulletin, with bot-protection headers and timeout handling."""
     url = "https://niseko.nadare.info/"
+    
+    # Disguise the script as a standard desktop web browser to bypass basic firewalls
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+    }
+    
     try:
-        response = requests.get(url, timeout=10)
+        response = requests.get(url, headers=headers, timeout=10)
         response.raise_for_status() 
         soup = BeautifulSoup(response.text, 'html.parser')
+        
         latest_post = soup.find('div', class_='entry-content') or soup.find('article')
         if latest_post:
             paragraphs = latest_post.find_all('p')
             text = "\n\n".join([p.get_text(strip=True) for p in paragraphs if p.get_text(strip=True)])
             return text
+            
         return "Bulletin structure changed or not found."
+        
+    except requests.exceptions.Timeout:
+        # Graceful fallback if the server is offline or blocking connections
+        return "Avalanche bulletin is currently unreachable (likely offline for the summer off-season)."
     except Exception as e:
         return f"Failed to fetch avalanche data: {str(e)}"
 
