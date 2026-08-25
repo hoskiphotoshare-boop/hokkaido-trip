@@ -340,8 +340,8 @@ def get_daily_commutes(api_key=None):
         ({"name": "Niseko Northern Resort", "coords": [140.630, 42.843]}, {"name": "Niseko Moiwa", "coords": [140.63, 42.84]}),
         ({"name": "Niseko Northern Resort", "coords": [140.630, 42.843]}, {"name": "Rusutsu Resort", "coords": [140.90, 42.75]}),
         ({"name": "Grids Premium Otaru", "coords": [140.996, 43.193]}, {"name": "Kiroro Snow World", "coords": [140.99, 43.07]}),
-        ({"name": "Furano La Terre", "coords": [142.434, 43.408]}, {"name": "Kamui Ski Links", "coords": [142.25, 43.83]}),
-        ({"name": "Furano La Terre", "coords": [142.434, 43.408]}, {"name": "Furano Ski Resort", "coords": [142.33, 43.33]}),
+        ({"name": "Furano La Terre", "coords": [142.434, 43.408]}, {"name": "Kamui Ski Links", "coords": [142.2396, 43.7231]}),
+        ({"name": "Furano La Terre", "coords": [142.434, 43.408]}, {"name": "Furano Ski Resort", "coords": [142.3540, 43.3243]}),
         ({"name": "Furano La Terre", "coords": [142.434, 43.408]}, {"name": "Asahikawa Town", "coords": [142.36, 43.76]}),
         ({"name": "Sapporo Susukino", "coords": [141.353, 43.055]}, {"name": "Sapporo Teine", "coords": [141.19, 43.10]}),
         ({"name": "Sapporo Susukino", "coords": [141.353, 43.055]}, {"name": "Sapporo Kokusai", "coords": [141.07, 43.07]})
@@ -352,7 +352,7 @@ def get_daily_commutes(api_key=None):
     results = []
 
     for start, end in commutes:
-        payload = {"coordinates": [start["coords"], end["coords"]], "elevation": False}
+        payload = {"coordinates": [start["coords"], end["coords"]], "elevation": False, "radiuses": [5000, 5000]}
         try:
             response = requests.post(url, headers=headers, json=payload, timeout=10)
             if response.status_code == 200:
