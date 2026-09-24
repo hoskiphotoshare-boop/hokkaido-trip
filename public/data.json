@@ -1,5 +1,5 @@
 {
-  "last_updated_utc": "2026-09-24T14:40:27.115016+00:00",
+  "last_updated_utc": "2026-09-24T19:50:43.704322+00:00",
   "currency": {
     "CAD_to_JPY": {
       "latest_rate": 112.53,
@@ -147,100 +147,100 @@
   },
   "resorts": {
     "Niseko Tokyu Grand Hirafu": {
-      "temp_celsius": 9.0,
+      "temp_celsius": 7.0,
       "24h_snowfall_cm": 0.0,
       "base_depth_cm": 0,
-      "wind_speed_kmh": 2.3,
-      "visibility_meters": 180.0,
-      "freezing_level_m": 2730.0,
-      "cloud_cover_percent": 94,
+      "wind_speed_kmh": 0.6,
+      "visibility_meters": 38320.0,
+      "freezing_level_m": 2990.0,
+      "cloud_cover_percent": 45,
       "uv_index": 0.0,
-      "sunrise": "2026-09-24T05:26",
-      "sunset": "2026-09-24T17:32"
+      "sunrise": "2026-09-25T05:27",
+      "sunset": "2026-09-25T17:30"
     },
     "Niseko Moiwa Ski Resort": {
-      "temp_celsius": 9.0,
+      "temp_celsius": 7.0,
+      "24h_snowfall_cm": 0.0,
+      "base_depth_cm": 0,
+      "wind_speed_kmh": 0.6,
+      "visibility_meters": 38320.0,
+      "freezing_level_m": 3060.0,
+      "cloud_cover_percent": 45,
+      "uv_index": 0.0,
+      "sunrise": "2026-09-25T05:27",
+      "sunset": "2026-09-25T17:30"
+    },
+    "Rusutsu Resort": {
+      "temp_celsius": 7.4,
       "24h_snowfall_cm": 0.0,
       "base_depth_cm": 0,
       "wind_speed_kmh": 2.3,
-      "visibility_meters": 180.0,
-      "freezing_level_m": 2810.0,
-      "cloud_cover_percent": 94,
+      "visibility_meters": 46980.0,
+      "freezing_level_m": 2990.0,
+      "cloud_cover_percent": 24,
       "uv_index": 0.0,
-      "sunrise": "2026-09-24T05:26",
-      "sunset": "2026-09-24T17:32"
-    },
-    "Rusutsu Resort": {
-      "temp_celsius": 8.8,
-      "24h_snowfall_cm": 0.0,
-      "base_depth_cm": 0,
-      "wind_speed_kmh": 6.4,
-      "visibility_meters": 36300.0,
-      "freezing_level_m": 2820.0,
-      "cloud_cover_percent": 49,
-      "uv_index": 0.0,
-      "sunrise": "2026-09-24T05:25",
-      "sunset": "2026-09-24T17:31"
+      "sunrise": "2026-09-25T05:26",
+      "sunset": "2026-09-25T17:29"
     },
     "Kiroro Snow World": {
-      "temp_celsius": 8.6,
+      "temp_celsius": 8.7,
       "24h_snowfall_cm": 0.0,
       "base_depth_cm": 0,
-      "wind_speed_kmh": 8.4,
-      "visibility_meters": 46280.0,
-      "freezing_level_m": 2250.0,
-      "cloud_cover_percent": 26,
+      "wind_speed_kmh": 4.0,
+      "visibility_meters": 48100.0,
+      "freezing_level_m": 2590.0,
+      "cloud_cover_percent": 60,
       "uv_index": 0.0,
-      "sunrise": "2026-09-24T05:25",
-      "sunset": "2026-09-24T17:30"
+      "sunrise": "2026-09-25T05:26",
+      "sunset": "2026-09-25T17:29"
     },
     "Kamui Ski Links": {
-      "temp_celsius": 8.5,
+      "temp_celsius": 4.7,
       "24h_snowfall_cm": 0.0,
       "base_depth_cm": 0,
-      "wind_speed_kmh": 4.3,
-      "visibility_meters": 41840.0,
-      "freezing_level_m": 2150.0,
-      "cloud_cover_percent": 1,
-      "uv_index": 0.0,
-      "sunrise": "2026-09-24T05:19",
-      "sunset": "2026-09-24T17:25"
-    },
-    "Furano Ski Resort": {
-      "temp_celsius": 5.5,
-      "24h_snowfall_cm": 0.0,
-      "base_depth_cm": 0,
-      "wind_speed_kmh": 4.8,
-      "visibility_meters": 46400.0,
-      "freezing_level_m": 2620.0,
+      "wind_speed_kmh": 1.2,
+      "visibility_meters": 25360.0,
+      "freezing_level_m": 1910.0,
       "cloud_cover_percent": 4,
       "uv_index": 0.0,
-      "sunrise": "2026-09-24T05:19",
-      "sunset": "2026-09-24T17:25"
+      "sunrise": "2026-09-25T05:20",
+      "sunset": "2026-09-25T17:23"
+    },
+    "Furano Ski Resort": {
+      "temp_celsius": 4.4,
+      "24h_snowfall_cm": 0.0,
+      "base_depth_cm": 0,
+      "wind_speed_kmh": 1.5,
+      "visibility_meters": 46240.0,
+      "freezing_level_m": 2550.0,
+      "cloud_cover_percent": 46,
+      "uv_index": 0.0,
+      "sunrise": "2026-09-25T05:20",
+      "sunset": "2026-09-25T17:23"
     },
     "Sapporo Teine": {
-      "temp_celsius": 13.7,
+      "temp_celsius": 11.3,
       "24h_snowfall_cm": 0.0,
       "base_depth_cm": 0,
-      "wind_speed_kmh": 15.1,
-      "visibility_meters": 46160.0,
-      "freezing_level_m": 2250.0,
-      "cloud_cover_percent": 49,
+      "wind_speed_kmh": 4.4,
+      "visibility_meters": 45200.0,
+      "freezing_level_m": 2590.0,
+      "cloud_cover_percent": 79,
       "uv_index": 0.0,
-      "sunrise": "2026-09-24T05:23",
-      "sunset": "2026-09-24T17:29"
+      "sunrise": "2026-09-25T05:25",
+      "sunset": "2026-09-25T17:27"
     },
     "Sapporo Kokusai": {
-      "temp_celsius": 6.8,
+      "temp_celsius": 6.7,
       "24h_snowfall_cm": 0.0,
       "base_depth_cm": 0,
-      "wind_speed_kmh": 7.7,
-      "visibility_meters": 6940.0,
-      "freezing_level_m": 2680.0,
-      "cloud_cover_percent": 35,
+      "wind_speed_kmh": 5.2,
+      "visibility_meters": 51260.0,
+      "freezing_level_m": 2850.0,
+      "cloud_cover_percent": 73,
       "uv_index": 0.0,
-      "sunrise": "2026-09-24T05:24",
-      "sunset": "2026-09-24T17:30"
+      "sunrise": "2026-09-25T05:25",
+      "sunset": "2026-09-25T17:28"
     }
   },
   "lift_status": {
