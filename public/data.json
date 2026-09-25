@@ -1,8 +1,8 @@
 {
-  "last_updated_utc": "2026-09-25T09:26:43.990216+00:00",
+  "last_updated_utc": "2026-09-25T15:02:28.727275+00:00",
   "currency": {
     "CAD_to_JPY": {
-      "latest_rate": 112.53,
+      "latest_rate": 111.43,
       "7_day_history": [
         {
           "date": "2026-09-18",
@@ -23,6 +23,10 @@
         {
           "date": "2026-09-24",
           "rate": 112.53
+        },
+        {
+          "date": "2026-09-25",
+          "rate": 111.43
         }
       ]
     }
@@ -143,100 +147,100 @@
   },
   "resorts": {
     "Niseko Tokyu Grand Hirafu": {
-      "temp_celsius": 11.0,
+      "temp_celsius": 7.6,
       "24h_snowfall_cm": 0.0,
       "base_depth_cm": 0,
-      "wind_speed_kmh": 0.5,
-      "visibility_meters": 45800.0,
-      "freezing_level_m": 2740.0,
-      "cloud_cover_percent": 20,
+      "wind_speed_kmh": 1.0,
+      "visibility_meters": 30240.0,
+      "freezing_level_m": 2670.0,
+      "cloud_cover_percent": 97,
       "uv_index": 0.0,
-      "sunrise": "2026-09-25T05:27",
-      "sunset": "2026-09-25T17:30"
+      "sunrise": "2026-09-26T05:28",
+      "sunset": "2026-09-26T17:28"
     },
     "Niseko Moiwa Ski Resort": {
-      "temp_celsius": 11.0,
+      "temp_celsius": 7.6,
       "24h_snowfall_cm": 0.0,
       "base_depth_cm": 0,
-      "wind_speed_kmh": 0.5,
-      "visibility_meters": 45800.0,
-      "freezing_level_m": 2860.0,
-      "cloud_cover_percent": 20,
+      "wind_speed_kmh": 1.0,
+      "visibility_meters": 30240.0,
+      "freezing_level_m": 2810.0,
+      "cloud_cover_percent": 97,
       "uv_index": 0.0,
-      "sunrise": "2026-09-25T05:27",
-      "sunset": "2026-09-25T17:30"
+      "sunrise": "2026-09-26T05:28",
+      "sunset": "2026-09-26T17:28"
     },
     "Rusutsu Resort": {
-      "temp_celsius": 10.4,
+      "temp_celsius": 8.7,
       "24h_snowfall_cm": 0.0,
       "base_depth_cm": 0,
-      "wind_speed_kmh": 4.2,
-      "visibility_meters": 47040.0,
-      "freezing_level_m": 2890.0,
-      "cloud_cover_percent": 5,
+      "wind_speed_kmh": 2.6,
+      "visibility_meters": 47060.0,
+      "freezing_level_m": 2690.0,
+      "cloud_cover_percent": 92,
       "uv_index": 0.0,
-      "sunrise": "2026-09-25T05:26",
-      "sunset": "2026-09-25T17:29"
+      "sunrise": "2026-09-26T05:27",
+      "sunset": "2026-09-26T17:27"
     },
     "Kiroro Snow World": {
-      "temp_celsius": 9.5,
+      "temp_celsius": 8.2,
       "24h_snowfall_cm": 0.0,
       "base_depth_cm": 0,
-      "wind_speed_kmh": 8.4,
-      "visibility_meters": 44360.0,
-      "freezing_level_m": 2220.0,
-      "cloud_cover_percent": 31,
+      "wind_speed_kmh": 6.6,
+      "visibility_meters": 44400.0,
+      "freezing_level_m": 2490.0,
+      "cloud_cover_percent": 87,
       "uv_index": 0.0,
-      "sunrise": "2026-09-25T05:26",
-      "sunset": "2026-09-25T17:29"
+      "sunrise": "2026-09-26T05:27",
+      "sunset": "2026-09-26T17:27"
     },
     "Kamui Ski Links": {
-      "temp_celsius": 10.9,
+      "temp_celsius": 7.1,
       "24h_snowfall_cm": 0.0,
       "base_depth_cm": 0,
-      "wind_speed_kmh": 4.5,
-      "visibility_meters": 48080.0,
-      "freezing_level_m": 2010.0,
-      "cloud_cover_percent": 9,
+      "wind_speed_kmh": 1.1,
+      "visibility_meters": 33560.0,
+      "freezing_level_m": 2270.0,
+      "cloud_cover_percent": 84,
       "uv_index": 0.0,
-      "sunrise": "2026-09-25T05:20",
-      "sunset": "2026-09-25T17:23"
+      "sunrise": "2026-09-26T05:22",
+      "sunset": "2026-09-26T17:21"
     },
     "Furano Ski Resort": {
-      "temp_celsius": 7.2,
+      "temp_celsius": 4.0,
       "24h_snowfall_cm": 0.0,
       "base_depth_cm": 0,
-      "wind_speed_kmh": 4.3,
-      "visibility_meters": 49100.0,
-      "freezing_level_m": 2040.0,
-      "cloud_cover_percent": 19,
+      "wind_speed_kmh": 4.1,
+      "visibility_meters": 41520.0,
+      "freezing_level_m": 2550.0,
+      "cloud_cover_percent": 49,
       "uv_index": 0.0,
-      "sunrise": "2026-09-25T05:20",
-      "sunset": "2026-09-25T17:23"
+      "sunrise": "2026-09-26T05:21",
+      "sunset": "2026-09-26T17:21"
     },
     "Sapporo Teine": {
-      "temp_celsius": 13.6,
+      "temp_celsius": 10.2,
       "24h_snowfall_cm": 0.0,
       "base_depth_cm": 0,
-      "wind_speed_kmh": 5.4,
-      "visibility_meters": 43520.0,
-      "freezing_level_m": 2220.0,
-      "cloud_cover_percent": 42,
+      "wind_speed_kmh": 4.6,
+      "visibility_meters": 40740.0,
+      "freezing_level_m": 2490.0,
+      "cloud_cover_percent": 80,
       "uv_index": 0.0,
-      "sunrise": "2026-09-25T05:25",
-      "sunset": "2026-09-25T17:27"
+      "sunrise": "2026-09-26T05:26",
+      "sunset": "2026-09-26T17:26"
     },
     "Sapporo Kokusai": {
-      "temp_celsius": 7.7,
+      "temp_celsius": 7.1,
       "24h_snowfall_cm": 0.0,
       "base_depth_cm": 0,
-      "wind_speed_kmh": 7.6,
-      "visibility_meters": 47500.0,
-      "freezing_level_m": 2550.0,
-      "cloud_cover_percent": 16,
+      "wind_speed_kmh": 5.5,
+      "visibility_meters": 47560.0,
+      "freezing_level_m": 2600.0,
+      "cloud_cover_percent": 91,
       "uv_index": 0.0,
-      "sunrise": "2026-09-25T05:25",
-      "sunset": "2026-09-25T17:28"
+      "sunrise": "2026-09-26T05:27",
+      "sunset": "2026-09-26T17:27"
     }
   },
   "lift_status": {
@@ -261,9 +265,9 @@
       "status": "Live Data Parsed"
     },
     "Kiroro Snow World": {
-      "lifts_open": "0/10Lift Open",
-      "runs_open": "0/24Trail Open",
-      "status": "Live Data Parsed"
+      "lifts_open": "N/A",
+      "runs_open": "N/A",
+      "status": "Error: HTTPSConnectionPool(host='www.kiroro.co.jp', port=443): Max retries exceeded with url: /snow_report/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.kiroro.co.jp', port=443) at 0x7f1bc63d4f40>, 'Connection to www.kiroro.co.jp timed out. (connect timeout=10)'))"
     },
     "Niseko Moiwa Ski Resort": {
       "lifts_open": "Manual Check Req.",
