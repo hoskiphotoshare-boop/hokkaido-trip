@@ -299,13 +299,14 @@ def get_niseko_avalanche_bulletin():
 
 def get_cad_jpy_exchange():
     end_date = datetime.now(timezone.utc).strftime('%Y-%m-%d')
-    start_date = (datetime.now(timezone.utc) - timedelta(days=7)).strftime('%Y-%m-%d')
+    start_date = (datetime.now(timezone.utc) - timedelta(days=183)).strftime('%Y-%m-%d')
 
     history_url = f"https://api.frankfurter.app/{start_date}..{end_date}?from=CAD&to=JPY"
     latest_url = "https://api.frankfurter.app/latest?from=CAD&to=JPY"
 
     payload = {
         "latest_rate": "N/A",
+        "6_month_history": [],
         "7_day_history": []
     }
 
@@ -314,14 +315,17 @@ def get_cad_jpy_exchange():
         if latest_res.status_code == 200:
             payload["latest_rate"] = latest_res.json().get("rates", {}).get("JPY", "N/A")
 
-        history_res = requests.get(history_url, timeout=10)
+        history_res = requests.get(history_url, timeout=15)
         if history_res.status_code == 200:
             rates = history_res.json().get("rates", {})
+            history_list = []
             for date, rate_data in rates.items():
-                payload["7_day_history"].append({
+                history_list.append({
                     "date": date,
                     "rate": rate_data.get("JPY")
                 })
+            payload["6_month_history"] = history_list
+            payload["7_day_history"] = history_list[-7:]
     except Exception as e:
         payload["error"] = str(e)
 
