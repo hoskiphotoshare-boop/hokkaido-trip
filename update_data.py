@@ -297,12 +297,12 @@ def get_niseko_avalanche_bulletin():
     except Exception as e:
         return f"Failed to fetch avalanche data: {str(e)}"
 
-def get_cad_jpy_exchange():
+def get_fx_exchange(base_currency="CAD"):
     end_date = datetime.now(timezone.utc).strftime('%Y-%m-%d')
     start_date = (datetime.now(timezone.utc) - timedelta(days=183)).strftime('%Y-%m-%d')
 
-    history_url = f"https://api.frankfurter.app/{start_date}..{end_date}?from=CAD&to=JPY"
-    latest_url = "https://api.frankfurter.app/latest?from=CAD&to=JPY"
+    history_url = f"https://api.frankfurter.app/{start_date}..{end_date}?from={base_currency}&to=JPY"
+    latest_url = f"https://api.frankfurter.app/latest?from={base_currency}&to=JPY"
 
     payload = {
         "latest_rate": "N/A",
@@ -435,8 +435,7 @@ def get_resort_news():
         soup = BeautifulSoup(response.text, 'html.parser')
         report_body = soup.find('div', class_='report-text') or soup.find('div', class_='snow-report-content')
         if report_body:
-            paragraphs = report_body.find_all('p')
-            summary = " ".join([p.get_text(strip=True) for p in paragraphs[:2]])
+            paragraphs = report_body.find_all('p')\n            summary = " ".join([p.get_text(strip=True) for p in paragraphs[:2]])
             return summary if summary else "Report content is empty."
         return "Daily resort news is currently unavailable."
     except Exception as e:
@@ -451,8 +450,9 @@ def build_payload():
     print("Fetching mountain safety...")
     safety = get_niseko_avalanche_bulletin()
 
-    print("Fetching currency...")
-    jpy_rate = get_cad_jpy_exchange()
+    print("Fetching currency (CAD & USD to JPY)...")
+    cad_jpy_rate = get_fx_exchange("CAD")
+    usd_jpy_rate = get_fx_exchange("USD")
 
     print("Fetching road conditions and daily commutes...")
     roads = get_road_conditions()
@@ -477,7 +477,8 @@ def build_payload():
     final_payload = {
         "last_updated_utc": datetime.now(timezone.utc).isoformat(),
         "currency": {
-            "CAD_to_JPY": jpy_rate
+            "CAD_to_JPY": cad_jpy_rate,
+            "USD_to_JPY": usd_jpy_rate
         },
         "logistics": {
             "cts_airport_notices": airport,
