@@ -435,7 +435,8 @@ def get_resort_news():
         soup = BeautifulSoup(response.text, 'html.parser')
         report_body = soup.find('div', class_='report-text') or soup.find('div', class_='snow-report-content')
         if report_body:
-            paragraphs = report_body.find_all('p')\n            summary = " ".join([p.get_text(strip=True) for p in paragraphs[:2]])
+            paragraphs = report_body.find_all('p')
+            summary = " ".join([p.get_text(strip=True) for p in paragraphs[:2]])
             return summary if summary else "Report content is empty."
         return "Daily resort news is currently unavailable."
     except Exception as e:
