@@ -1,4 +1,5 @@
 import json
+import re
 import requests
 from bs4 import BeautifulSoup
 from datetime import datetime, timedelta, timezone
@@ -62,9 +63,25 @@ def get_weather_data():
     return weather_payload
 
 def get_jma_warnings():
-    """Scans the JMA endpoints for Sapporo/Shiribeshi (016000) and Kamikawa/Furano (012000)."""
+    """Scans the JMA endpoints for Sapporo/Shiribeshi (016000) and Kamikawa/Furano (012000) for severe warnings."""
     area_codes = ["016000", "012000"]
-    has_warnings = False
+    severe_codes = {
+        "02": "Blizzard Warning",
+        "03": "Heavy Rain Warning",
+        "04": "Flood Warning",
+        "05": "Storm Warning",
+        "06": "Heavy Snow Warning",
+        "07": "Wave Warning",
+        "08": "Storm Surge Warning",
+        "20": "Avalanche Advisory",
+        "32": "Blizzard Emergency",
+        "33": "Heavy Rain Emergency",
+        "35": "Storm Emergency",
+        "36": "Heavy Snow Emergency",
+        "37": "Wave Emergency",
+        "38": "Storm Surge Emergency"
+    }
+    active_warnings = set()
 
     try:
         for code in area_codes:
@@ -77,39 +94,66 @@ def get_jma_warnings():
             data = response.json()
 
             if isinstance(data, list) and len(data) > 0:
-                data = data[0] # Handle case if array is returned.
+                data = data[0]
 
             if isinstance(data, dict) and "areaTypes" in data:
                 for area_type in data["areaTypes"]:
                     for area in area_type.get("areas", []):
                         for warning in area.get("warnings", []):
-                            if warning.get("code") != "00" and warning.get("status") != "解除":
-                                has_warnings = True
-                                break
+                            w_code = warning.get("code")
+                            w_status = warning.get("status")
+                            if w_code in severe_codes and w_status not in ("解除", "発表警報・注意報はなし", None):
+                                active_warnings.add(severe_codes[w_code])
 
-        if has_warnings:
-            return "⚠️ ACTIVE WARNINGS: Severe weather advisories are currently in effect for your route. Please check the official JMA website."
-        return "Normal. No active emergency warnings for your route."
-    except Exception as e:
-        return f"Failed to fetch JMA warnings: {str(e)}"
+        if active_warnings:
+            joined = ", ".join(sorted(active_warnings))
+            return f"⚠️ ACTIVE JMA WARNINGS (Hokkaido Route): {joined}. Please check the official JMA website."
+        return ""
+    except Exception:
+        return ""
 
 def get_jma_earthquakes():
-    """Fetches the most recent earthquake data from the JMA."""
+    """Fetches the most recent Hokkaido-region earthquake data from the JMA in English."""
     url = "https://www.jma.go.jp/bosai/quake/data/list.json"
+    hokkaido_keywords = (
+        "hokkaido", "ishikari", "shiribeshi", "iburi", "hidaka", "oshima", "hiyama",
+        "sorachi", "kamikawa", "rumoi", "soya", "okhotsk", "tokachi", "kushiro",
+        "nemuro", "urakawa", "tomakomai", "sapporo", "hakodate", "chitose", "niseko"
+    )
+    jp_hokkaido_keywords = (
+        "北海道", "石狩", "後志", "胆振", "日高", "渡島", "檜山", "空知",
+        "上川", "留萌", "宗谷", "オホーツク", "十勝", "釧路", "根室", "浦河", "苫小牧"
+    )
     try:
         response = requests.get(url, timeout=10)
         data = response.json()
-        if data and len(data) > 0:
-            latest = data[0]
-            return {
-                "time": latest.get("at", "N/A"),
-                "epicenter": latest.get("anm", "N/A"),
-                "magnitude": latest.get("mag", "N/A"),
-                "max_seismic_intensity": latest.get("maxi", "N/A")
-            }
-        return "No recent earthquakes found."
-    except Exception as e:
-        return f"Failed to fetch earthquake data: {str(e)}"
+        if data and isinstance(data, list):
+            for item in data:
+                en_anm = (item.get("en_anm") or "").strip()
+                anm = (item.get("anm") or "").strip()
+                cod = item.get("cod") or ""
+
+                is_hokkaido = (
+                    any(k in en_anm.lower() for k in hokkaido_keywords)
+                    or any(k in anm for k in jp_hokkaido_keywords)
+                )
+                if not is_hokkaido and cod:
+                    m = re.match(r"^([+-]\d+(?:\.\d+)?)([+-]\d+(?:\.\d+)?)", cod)
+                    if m:
+                        lat, lon = float(m.group(1)), float(m.group(2))
+                        if 41.2 <= lat <= 45.8 and 139.0 <= lon <= 146.5:
+                            is_hokkaido = True
+
+                if is_hokkaido and item.get("mag"):
+                    return {
+                        "time": item.get("at", "N/A"),
+                        "epicenter": en_anm if en_anm else anm,
+                        "magnitude": item.get("mag", "N/A"),
+                        "max_seismic_intensity": item.get("maxi", "N/A")
+                    }
+        return "No recent earthquakes in Hokkaido."
+    except Exception:
+        return "No recent earthquakes in Hokkaido."
 
 def get_jr_hokkaido_status():
     """Fetches a summary of JR Hokkaido train operations."""
@@ -363,7 +407,7 @@ def get_daily_commutes(api_key=None):
                     "distance_km": round(route["distance"] / 1000, 1),
                     "duration_mins": round(route["duration"] / 60)
                 })
-        except Exception as e:
+        except Exception:
             continue
 
     return results
