@@ -1,8 +1,8 @@
 {
-  "last_updated_utc": "2026-11-13T11:56:24.519479+00:00",
+  "last_updated_utc": "2026-11-13T19:18:45.714818+00:00",
   "currency": {
     "CAD_to_JPY": {
-      "latest_rate": 112.08,
+      "latest_rate": 112.22,
       "6_month_history": [
         {
           "date": "2026-05-14",
@@ -527,13 +527,13 @@
         {
           "date": "2026-11-12",
           "rate": 112.08
+        },
+        {
+          "date": "2026-11-13",
+          "rate": 112.22
         }
       ],
       "7_day_history": [
-        {
-          "date": "2026-11-04",
-          "rate": 113.56
-        },
         {
           "date": "2026-11-05",
           "rate": 113.46
@@ -557,11 +557,15 @@
         {
           "date": "2026-11-12",
           "rate": 112.08
+        },
+        {
+          "date": "2026-11-13",
+          "rate": 112.22
         }
       ]
     },
     "USD_to_JPY": {
-      "latest_rate": 159.7,
+      "latest_rate": 160.0,
       "6_month_history": [
         {
           "date": "2026-05-14",
@@ -1086,13 +1090,13 @@
         {
           "date": "2026-11-12",
           "rate": 159.7
+        },
+        {
+          "date": "2026-11-13",
+          "rate": 160.0
         }
       ],
       "7_day_history": [
-        {
-          "date": "2026-11-04",
-          "rate": 158.25
-        },
         {
           "date": "2026-11-05",
           "rate": 158.46
@@ -1116,6 +1120,10 @@
         {
           "date": "2026-11-12",
           "rate": 159.7
+        },
+        {
+          "date": "2026-11-13",
+          "rate": 160.0
         }
       ]
     }
@@ -1236,28 +1244,100 @@
   },
   "resorts": {
     "Niseko Tokyu Grand Hirafu": {
-      "error": "HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=10)"
+      "temp_celsius": -1.6,
+      "24h_snowfall_cm": 0.0,
+      "base_depth_cm": 5,
+      "wind_speed_kmh": 1.0,
+      "visibility_meters": 120.0,
+      "freezing_level_m": 1350.0,
+      "cloud_cover_percent": 98,
+      "uv_index": 0.0,
+      "sunrise": "2026-11-14T06:27",
+      "sunset": "2026-11-14T16:15"
     },
     "Niseko Moiwa Ski Resort": {
-      "error": "HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=10)"
+      "temp_celsius": -1.6,
+      "24h_snowfall_cm": 0.0,
+      "base_depth_cm": 5,
+      "wind_speed_kmh": 1.0,
+      "visibility_meters": 120.0,
+      "freezing_level_m": 1550.0,
+      "cloud_cover_percent": 98,
+      "uv_index": 0.0,
+      "sunrise": "2026-11-14T06:27",
+      "sunset": "2026-11-14T16:15"
     },
     "Rusutsu Resort": {
-      "error": "HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=10)"
+      "temp_celsius": 0.3,
+      "24h_snowfall_cm": 0.0,
+      "base_depth_cm": 1,
+      "wind_speed_kmh": 3.9,
+      "visibility_meters": 31980.0,
+      "freezing_level_m": 1630.0,
+      "cloud_cover_percent": 10,
+      "uv_index": 0.0,
+      "sunrise": "2026-11-14T06:26",
+      "sunset": "2026-11-14T16:14"
     },
     "Kiroro Snow World": {
-      "error": "HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=10)"
+      "temp_celsius": 4.0,
+      "24h_snowfall_cm": 0.0,
+      "base_depth_cm": 0,
+      "wind_speed_kmh": 17.0,
+      "visibility_meters": 2480.0,
+      "freezing_level_m": 1330.0,
+      "cloud_cover_percent": 29,
+      "uv_index": 0.0,
+      "sunrise": "2026-11-14T06:27",
+      "sunset": "2026-11-14T16:13"
     },
     "Kamui Ski Links": {
-      "error": "HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=10)"
+      "temp_celsius": -0.1,
+      "24h_snowfall_cm": 0.0,
+      "base_depth_cm": 0,
+      "wind_speed_kmh": 4.9,
+      "visibility_meters": 25840.0,
+      "freezing_level_m": 1200.0,
+      "cloud_cover_percent": 78,
+      "uv_index": 0.0,
+      "sunrise": "2026-11-14T06:23",
+      "sunset": "2026-11-14T16:06"
     },
     "Furano Ski Resort": {
-      "error": "HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=10)"
+      "temp_celsius": -2.4,
+      "24h_snowfall_cm": 0.0,
+      "base_depth_cm": 0,
+      "wind_speed_kmh": 5.5,
+      "visibility_meters": 10300.0,
+      "freezing_level_m": 1470.0,
+      "cloud_cover_percent": 45,
+      "uv_index": 0.0,
+      "sunrise": "2026-11-14T06:21",
+      "sunset": "2026-11-14T16:07"
     },
     "Sapporo Teine": {
-      "error": "HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=10)"
+      "temp_celsius": 3.4,
+      "24h_snowfall_cm": 0.0,
+      "base_depth_cm": 0,
+      "wind_speed_kmh": 8.7,
+      "visibility_meters": 47440.0,
+      "freezing_level_m": 1520.0,
+      "cloud_cover_percent": 19,
+      "uv_index": 0.0,
+      "sunrise": "2026-11-14T06:25",
+      "sunset": "2026-11-14T16:12"
     },
     "Sapporo Kokusai": {
-      "error": "HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=10)"
+      "temp_celsius": 2.3,
+      "24h_snowfall_cm": 0.0,
+      "base_depth_cm": 0,
+      "wind_speed_kmh": 12.8,
+      "visibility_meters": 46280.0,
+      "freezing_level_m": 1330.0,
+      "cloud_cover_percent": 27,
+      "uv_index": 0.0,
+      "sunrise": "2026-11-14T06:26",
+      "sunset": "2026-11-14T16:13"
     }
   },
   "lift_status": {
