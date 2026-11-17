@@ -1,14 +1,571 @@
 {
-  "last_updated_utc": "2026-11-17T07:46:01.623221+00:00",
+  "last_updated_utc": "2026-11-17T17:26:09.720813+00:00",
   "currency": {
     "CAD_to_JPY": {
-      "latest_rate": 111.72,
-      "6_month_history": [],
-      "7_day_history": [],
-      "error": "HTTPSConnectionPool(host='api.frankfurter.dev', port=443): Read timed out. (read timeout=15)"
+      "latest_rate": 111.47,
+      "6_month_history": [
+        {
+          "date": "2026-05-18",
+          "rate": 115.54
+        },
+        {
+          "date": "2026-05-19",
+          "rate": 115.66
+        },
+        {
+          "date": "2026-05-20",
+          "rate": 115.6
+        },
+        {
+          "date": "2026-05-21",
+          "rate": 115.57
+        },
+        {
+          "date": "2026-05-22",
+          "rate": 115.32
+        },
+        {
+          "date": "2026-05-25",
+          "rate": 115.06
+        },
+        {
+          "date": "2026-05-26",
+          "rate": 115.27
+        },
+        {
+          "date": "2026-05-27",
+          "rate": 115.24
+        },
+        {
+          "date": "2026-05-28",
+          "rate": 115.1
+        },
+        {
+          "date": "2026-05-29",
+          "rate": 115.37
+        },
+        {
+          "date": "2026-06-01",
+          "rate": 115.32
+        },
+        {
+          "date": "2026-06-02",
+          "rate": 115.45
+        },
+        {
+          "date": "2026-06-03",
+          "rate": 115.36
+        },
+        {
+          "date": "2026-06-04",
+          "rate": 114.99
+        },
+        {
+          "date": "2026-06-05",
+          "rate": 115.16
+        },
+        {
+          "date": "2026-06-08",
+          "rate": 114.78
+        },
+        {
+          "date": "2026-06-09",
+          "rate": 115.05
+        },
+        {
+          "date": "2026-06-10",
+          "rate": 115.22
+        },
+        {
+          "date": "2026-06-11",
+          "rate": 114.84
+        },
+        {
+          "date": "2026-06-12",
+          "rate": 114.52
+        },
+        {
+          "date": "2026-06-15",
+          "rate": 114.57
+        },
+        {
+          "date": "2026-06-16",
+          "rate": 114.44
+        },
+        {
+          "date": "2026-06-17",
+          "rate": 114.41
+        },
+        {
+          "date": "2026-06-18",
+          "rate": 113.93
+        },
+        {
+          "date": "2026-06-19",
+          "rate": 113.93
+        },
+        {
+          "date": "2026-06-22",
+          "rate": 114.24
+        },
+        {
+          "date": "2026-06-23",
+          "rate": 113.86
+        },
+        {
+          "date": "2026-06-24",
+          "rate": 113.6
+        },
+        {
+          "date": "2026-06-25",
+          "rate": 113.66
+        },
+        {
+          "date": "2026-06-26",
+          "rate": 113.98
+        },
+        {
+          "date": "2026-06-29",
+          "rate": 113.96
+        },
+        {
+          "date": "2026-06-30",
+          "rate": 114.11
+        },
+        {
+          "date": "2026-07-01",
+          "rate": 114.39
+        },
+        {
+          "date": "2026-07-02",
+          "rate": 113.68
+        },
+        {
+          "date": "2026-07-03",
+          "rate": 113.47
+        },
+        {
+          "date": "2026-07-06",
+          "rate": 114.14
+        },
+        {
+          "date": "2026-07-07",
+          "rate": 113.87
+        },
+        {
+          "date": "2026-07-08",
+          "rate": 114.55
+        },
+        {
+          "date": "2026-07-09",
+          "rate": 114.63
+        },
+        {
+          "date": "2026-07-10",
+          "rate": 114.37
+        },
+        {
+          "date": "2026-07-13",
+          "rate": 114.71
+        },
+        {
+          "date": "2026-07-14",
+          "rate": 114.95
+        },
+        {
+          "date": "2026-07-15",
+          "rate": 115.38
+        },
+        {
+          "date": "2026-07-16",
+          "rate": 115.65
+        },
+        {
+          "date": "2026-07-17",
+          "rate": 115.78
+        },
+        {
+          "date": "2026-07-20",
+          "rate": 115.73
+        },
+        {
+          "date": "2026-07-21",
+          "rate": 115.64
+        },
+        {
+          "date": "2026-07-22",
+          "rate": 115.76
+        },
+        {
+          "date": "2026-07-23",
+          "rate": 116.15
+        },
+        {
+          "date": "2026-07-24",
+          "rate": 116.3
+        },
+        {
+          "date": "2026-07-27",
+          "rate": 116.02
+        },
+        {
+          "date": "2026-07-28",
+          "rate": 116.19
+        },
+        {
+          "date": "2026-07-29",
+          "rate": 116.05
+        },
+        {
+          "date": "2026-07-30",
+          "rate": 116.01
+        },
+        {
+          "date": "2026-07-31",
+          "rate": 114.12
+        },
+        {
+          "date": "2026-08-03",
+          "rate": 111.69
+        },
+        {
+          "date": "2026-08-04",
+          "rate": 111.95
+        },
+        {
+          "date": "2026-08-05",
+          "rate": 112.19
+        },
+        {
+          "date": "2026-08-06",
+          "rate": 112.76
+        },
+        {
+          "date": "2026-08-07",
+          "rate": 113.02
+        },
+        {
+          "date": "2026-08-10",
+          "rate": 113.8
+        },
+        {
+          "date": "2026-08-11",
+          "rate": 114.23
+        },
+        {
+          "date": "2026-08-12",
+          "rate": 114.24
+        },
+        {
+          "date": "2026-08-13",
+          "rate": 114.22
+        },
+        {
+          "date": "2026-08-14",
+          "rate": 114.61
+        },
+        {
+          "date": "2026-08-17",
+          "rate": 114.89
+        },
+        {
+          "date": "2026-08-18",
+          "rate": 115.11
+        },
+        {
+          "date": "2026-08-19",
+          "rate": 114.69
+        },
+        {
+          "date": "2026-08-20",
+          "rate": 115.29
+        },
+        {
+          "date": "2026-08-21",
+          "rate": 115.5
+        },
+        {
+          "date": "2026-08-24",
+          "rate": 114.89
+        },
+        {
+          "date": "2026-08-25",
+          "rate": 114.89
+        },
+        {
+          "date": "2026-08-26",
+          "rate": 114.75
+        },
+        {
+          "date": "2026-08-27",
+          "rate": 114.92
+        },
+        {
+          "date": "2026-08-28",
+          "rate": 115.26
+        },
+        {
+          "date": "2026-08-31",
+          "rate": 115.03
+        },
+        {
+          "date": "2026-09-01",
+          "rate": 115.33
+        },
+        {
+          "date": "2026-09-02",
+          "rate": 114.61
+        },
+        {
+          "date": "2026-09-03",
+          "rate": 113.12
+        },
+        {
+          "date": "2026-09-04",
+          "rate": 113.22
+        },
+        {
+          "date": "2026-09-07",
+          "rate": 111.97
+        },
+        {
+          "date": "2026-09-08",
+          "rate": 111.77
+        },
+        {
+          "date": "2026-09-09",
+          "rate": 111.32
+        },
+        {
+          "date": "2026-09-10",
+          "rate": 111.59
+        },
+        {
+          "date": "2026-09-11",
+          "rate": 111.16
+        },
+        {
+          "date": "2026-09-14",
+          "rate": 111.29
+        },
+        {
+          "date": "2026-09-15",
+          "rate": 111.36
+        },
+        {
+          "date": "2026-09-16",
+          "rate": 111.23
+        },
+        {
+          "date": "2026-09-17",
+          "rate": 111.25
+        },
+        {
+          "date": "2026-09-18",
+          "rate": 112.69
+        },
+        {
+          "date": "2026-09-21",
+          "rate": 112.3
+        },
+        {
+          "date": "2026-09-22",
+          "rate": 111.91
+        },
+        {
+          "date": "2026-09-23",
+          "rate": 112.09
+        },
+        {
+          "date": "2026-09-24",
+          "rate": 112.53
+        },
+        {
+          "date": "2026-09-25",
+          "rate": 111.43
+        },
+        {
+          "date": "2026-09-28",
+          "rate": 110.75
+        },
+        {
+          "date": "2026-09-29",
+          "rate": 110.81
+        },
+        {
+          "date": "2026-09-30",
+          "rate": 110.69
+        },
+        {
+          "date": "2026-10-01",
+          "rate": 110.9
+        },
+        {
+          "date": "2026-10-02",
+          "rate": 110.73
+        },
+        {
+          "date": "2026-10-05",
+          "rate": 111.02
+        },
+        {
+          "date": "2026-10-06",
+          "rate": 110.94
+        },
+        {
+          "date": "2026-10-07",
+          "rate": 111.01
+        },
+        {
+          "date": "2026-10-08",
+          "rate": 110.98
+        },
+        {
+          "date": "2026-10-09",
+          "rate": 111.24
+        },
+        {
+          "date": "2026-10-12",
+          "rate": 111.21
+        },
+        {
+          "date": "2026-10-13",
+          "rate": 111.03
+        },
+        {
+          "date": "2026-10-14",
+          "rate": 111.44
+        },
+        {
+          "date": "2026-10-15",
+          "rate": 111.2
+        },
+        {
+          "date": "2026-10-16",
+          "rate": 111.59
+        },
+        {
+          "date": "2026-10-19",
+          "rate": 112.44
+        },
+        {
+          "date": "2026-10-20",
+          "rate": 112.54
+        },
+        {
+          "date": "2026-10-21",
+          "rate": 112.4
+        },
+        {
+          "date": "2026-10-22",
+          "rate": 111.9
+        },
+        {
+          "date": "2026-10-23",
+          "rate": 112.04
+        },
+        {
+          "date": "2026-10-26",
+          "rate": 112.23
+        },
+        {
+          "date": "2026-10-27",
+          "rate": 112.54
+        },
+        {
+          "date": "2026-10-28",
+          "rate": 112.46
+        },
+        {
+          "date": "2026-10-29",
+          "rate": 112.94
+        },
+        {
+          "date": "2026-10-30",
+          "rate": 112.57
+        },
+        {
+          "date": "2026-11-02",
+          "rate": 113.0
+        },
+        {
+          "date": "2026-11-03",
+          "rate": 113.26
+        },
+        {
+          "date": "2026-11-04",
+          "rate": 113.56
+        },
+        {
+          "date": "2026-11-05",
+          "rate": 113.46
+        },
+        {
+          "date": "2026-11-06",
+          "rate": 112.56
+        },
+        {
+          "date": "2026-11-09",
+          "rate": 112.0
+        },
+        {
+          "date": "2026-11-10",
+          "rate": 111.9
+        },
+        {
+          "date": "2026-11-11",
+          "rate": 111.86
+        },
+        {
+          "date": "2026-11-12",
+          "rate": 112.08
+        },
+        {
+          "date": "2026-11-13",
+          "rate": 112.22
+        },
+        {
+          "date": "2026-11-16",
+          "rate": 111.72
+        },
+        {
+          "date": "2026-11-17",
+          "rate": 111.47
+        }
+      ],
+      "7_day_history": [
+        {
+          "date": "2026-11-09",
+          "rate": 112.0
+        },
+        {
+          "date": "2026-11-10",
+          "rate": 111.9
+        },
+        {
+          "date": "2026-11-11",
+          "rate": 111.86
+        },
+        {
+          "date": "2026-11-12",
+          "rate": 112.08
+        },
+        {
+          "date": "2026-11-13",
+          "rate": 112.22
+        },
+        {
+          "date": "2026-11-16",
+          "rate": 111.72
+        },
+        {
+          "date": "2026-11-17",
+          "rate": 111.47
+        }
+      ]
     },
     "USD_to_JPY": {
-      "latest_rate": 159.6,
+      "latest_rate": 159.3,
       "6_month_history": [
         {
           "date": "2026-05-18",
@@ -533,13 +1090,13 @@
         {
           "date": "2026-11-16",
           "rate": 159.6
+        },
+        {
+          "date": "2026-11-17",
+          "rate": 159.3
         }
       ],
       "7_day_history": [
-        {
-          "date": "2026-11-06",
-          "rate": 158.33
-        },
         {
           "date": "2026-11-09",
           "rate": 157.95
@@ -563,6 +1120,10 @@
         {
           "date": "2026-11-16",
           "rate": 159.6
+        },
+        {
+          "date": "2026-11-17",
+          "rate": 159.3
         }
       ]
     }
@@ -683,28 +1244,100 @@
   },
   "resorts": {
     "Niseko Tokyu Grand Hirafu": {
-      "error": "HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=10)"
+      "temp_celsius": -0.1,
+      "24h_snowfall_cm": 0.07,
+      "base_depth_cm": 0,
+      "wind_speed_kmh": 4.2,
+      "visibility_meters": 20440.0,
+      "freezing_level_m": 690.0,
+      "cloud_cover_percent": 100,
+      "uv_index": 0.0,
+      "sunrise": "2026-11-18T06:32",
+      "sunset": "2026-11-18T16:11"
     },
     "Niseko Moiwa Ski Resort": {
-      "error": "HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=10)"
+      "temp_celsius": -0.1,
+      "24h_snowfall_cm": 0.07,
+      "base_depth_cm": 0,
+      "wind_speed_kmh": 4.2,
+      "visibility_meters": 20440.0,
+      "freezing_level_m": 650.0,
+      "cloud_cover_percent": 100,
+      "uv_index": 0.0,
+      "sunrise": "2026-11-18T06:32",
+      "sunset": "2026-11-18T16:11"
     },
     "Rusutsu Resort": {
-      "error": "HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=10)"
+      "temp_celsius": 1.8,
+      "24h_snowfall_cm": 0.0,
+      "base_depth_cm": 0,
+      "wind_speed_kmh": 10.4,
+      "visibility_meters": 8840.0,
+      "freezing_level_m": 720.0,
+      "cloud_cover_percent": 100,
+      "uv_index": 0.0,
+      "sunrise": "2026-11-18T06:31",
+      "sunset": "2026-11-18T16:11"
     },
     "Kiroro Snow World": {
-      "error": "HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=10)"
+      "temp_celsius": -1.2,
+      "24h_snowfall_cm": 0.0,
+      "base_depth_cm": 1,
+      "wind_speed_kmh": 5.2,
+      "visibility_meters": 13380.0,
+      "freezing_level_m": 590.0,
+      "cloud_cover_percent": 100,
+      "uv_index": 0.0,
+      "sunrise": "2026-11-18T06:32",
+      "sunset": "2026-11-18T16:10"
     },
     "Kamui Ski Links": {
-      "error": "HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=10)"
+      "temp_celsius": -2.8,
+      "24h_snowfall_cm": 0.0,
+      "base_depth_cm": 0,
+      "wind_speed_kmh": 3.4,
+      "visibility_meters": 47820.0,
+      "freezing_level_m": 120.0,
+      "cloud_cover_percent": 100,
+      "uv_index": 0.0,
+      "sunrise": "2026-11-18T06:28",
+      "sunset": "2026-11-18T16:02"
     },
     "Furano Ski Resort": {
-      "error": "HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=10)"
+      "temp_celsius": -4.9,
+      "24h_snowfall_cm": 0.0,
+      "base_depth_cm": 4,
+      "wind_speed_kmh": 7.0,
+      "visibility_meters": 35840.0,
+      "freezing_level_m": 340.0,
+      "cloud_cover_percent": 100,
+      "uv_index": 0.0,
+      "sunrise": "2026-11-18T06:26",
+      "sunset": "2026-11-18T16:04"
     },
     "Sapporo Teine": {
-      "error": "HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=10)"
+      "temp_celsius": 0.9,
+      "24h_snowfall_cm": 0.0,
+      "base_depth_cm": 0,
+      "wind_speed_kmh": 11.9,
+      "visibility_meters": 11700.0,
+      "freezing_level_m": 580.0,
+      "cloud_cover_percent": 100,
+      "uv_index": 0.0,
+      "sunrise": "2026-11-18T06:30",
+      "sunset": "2026-11-18T16:08"
     },
     "Sapporo Kokusai": {
-      "error": "HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=10)"
+      "temp_celsius": -2.0,
+      "24h_snowfall_cm": 0.0,
+      "base_depth_cm": 4,
+      "wind_speed_kmh": 7.7,
+      "visibility_meters": 2560.0,
+      "freezing_level_m": 590.0,
+      "cloud_cover_percent": 100,
+      "uv_index": 0.0,
+      "sunrise": "2026-11-18T06:31",
+      "sunset": "2026-11-18T16:09"
     }
   },
   "lift_status": {
