@@ -1,13 +1,9 @@
 {
-  "last_updated_utc": "2026-11-17T17:26:09.720813+00:00",
+  "last_updated_utc": "2026-11-18T00:40:20.447561+00:00",
   "currency": {
     "CAD_to_JPY": {
       "latest_rate": 111.47,
       "6_month_history": [
-        {
-          "date": "2026-05-18",
-          "rate": 115.54
-        },
         {
           "date": "2026-05-19",
           "rate": 115.66
@@ -567,10 +563,6 @@
     "USD_to_JPY": {
       "latest_rate": 159.3,
       "6_month_history": [
-        {
-          "date": "2026-05-18",
-          "rate": 158.77
-        },
         {
           "date": "2026-05-19",
           "rate": 159.11
@@ -1244,100 +1236,28 @@
   },
   "resorts": {
     "Niseko Tokyu Grand Hirafu": {
-      "temp_celsius": -0.1,
-      "24h_snowfall_cm": 0.07,
-      "base_depth_cm": 0,
-      "wind_speed_kmh": 4.2,
-      "visibility_meters": 20440.0,
-      "freezing_level_m": 690.0,
-      "cloud_cover_percent": 100,
-      "uv_index": 0.0,
-      "sunrise": "2026-11-18T06:32",
-      "sunset": "2026-11-18T16:11"
+      "error": "HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=10)"
     },
     "Niseko Moiwa Ski Resort": {
-      "temp_celsius": -0.1,
-      "24h_snowfall_cm": 0.07,
-      "base_depth_cm": 0,
-      "wind_speed_kmh": 4.2,
-      "visibility_meters": 20440.0,
-      "freezing_level_m": 650.0,
-      "cloud_cover_percent": 100,
-      "uv_index": 0.0,
-      "sunrise": "2026-11-18T06:32",
-      "sunset": "2026-11-18T16:11"
+      "error": "HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=10)"
     },
     "Rusutsu Resort": {
-      "temp_celsius": 1.8,
-      "24h_snowfall_cm": 0.0,
-      "base_depth_cm": 0,
-      "wind_speed_kmh": 10.4,
-      "visibility_meters": 8840.0,
-      "freezing_level_m": 720.0,
-      "cloud_cover_percent": 100,
-      "uv_index": 0.0,
-      "sunrise": "2026-11-18T06:31",
-      "sunset": "2026-11-18T16:11"
+      "error": "HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=10)"
     },
     "Kiroro Snow World": {
-      "temp_celsius": -1.2,
-      "24h_snowfall_cm": 0.0,
-      "base_depth_cm": 1,
-      "wind_speed_kmh": 5.2,
-      "visibility_meters": 13380.0,
-      "freezing_level_m": 590.0,
-      "cloud_cover_percent": 100,
-      "uv_index": 0.0,
-      "sunrise": "2026-11-18T06:32",
-      "sunset": "2026-11-18T16:10"
+      "error": "HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=10)"
     },
     "Kamui Ski Links": {
-      "temp_celsius": -2.8,
-      "24h_snowfall_cm": 0.0,
-      "base_depth_cm": 0,
-      "wind_speed_kmh": 3.4,
-      "visibility_meters": 47820.0,
-      "freezing_level_m": 120.0,
-      "cloud_cover_percent": 100,
-      "uv_index": 0.0,
-      "sunrise": "2026-11-18T06:28",
-      "sunset": "2026-11-18T16:02"
+      "error": "HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=10)"
     },
     "Furano Ski Resort": {
-      "temp_celsius": -4.9,
-      "24h_snowfall_cm": 0.0,
-      "base_depth_cm": 4,
-      "wind_speed_kmh": 7.0,
-      "visibility_meters": 35840.0,
-      "freezing_level_m": 340.0,
-      "cloud_cover_percent": 100,
-      "uv_index": 0.0,
-      "sunrise": "2026-11-18T06:26",
-      "sunset": "2026-11-18T16:04"
+      "error": "HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=10)"
     },
     "Sapporo Teine": {
-      "temp_celsius": 0.9,
-      "24h_snowfall_cm": 0.0,
-      "base_depth_cm": 0,
-      "wind_speed_kmh": 11.9,
-      "visibility_meters": 11700.0,
-      "freezing_level_m": 580.0,
-      "cloud_cover_percent": 100,
-      "uv_index": 0.0,
-      "sunrise": "2026-11-18T06:30",
-      "sunset": "2026-11-18T16:08"
+      "error": "HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=10)"
     },
     "Sapporo Kokusai": {
-      "temp_celsius": -2.0,
-      "24h_snowfall_cm": 0.0,
-      "base_depth_cm": 4,
-      "wind_speed_kmh": 7.7,
-      "visibility_meters": 2560.0,
-      "freezing_level_m": 590.0,
-      "cloud_cover_percent": 100,
-      "uv_index": 0.0,
-      "sunrise": "2026-11-18T06:31",
-      "sunset": "2026-11-18T16:09"
+      "error": "HTTPSConnectionPool(host='api.open-meteo.com', port=443): Read timed out. (read timeout=10)"
     }
   },
   "lift_status": {
