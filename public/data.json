@@ -1,8 +1,8 @@
 {
-  "last_updated_utc": "2026-11-20T09:45:24.885045+00:00",
+  "last_updated_utc": "2026-11-20T18:22:40.265973+00:00",
   "currency": {
     "CAD_to_JPY": {
-      "latest_rate": 111.86,
+      "latest_rate": 110.89,
       "6_month_history": [
         {
           "date": "2026-05-21",
@@ -527,13 +527,13 @@
         {
           "date": "2026-11-19",
           "rate": 111.86
+        },
+        {
+          "date": "2026-11-20",
+          "rate": 110.89
         }
       ],
       "7_day_history": [
-        {
-          "date": "2026-11-11",
-          "rate": 111.86
-        },
         {
           "date": "2026-11-12",
           "rate": 112.08
@@ -557,11 +557,15 @@
         {
           "date": "2026-11-19",
           "rate": 111.86
+        },
+        {
+          "date": "2026-11-20",
+          "rate": 110.89
         }
       ]
     },
     "USD_to_JPY": {
-      "latest_rate": 159.97,
+      "latest_rate": 158.64,
       "6_month_history": [
         {
           "date": "2026-05-21",
@@ -1086,13 +1090,13 @@
         {
           "date": "2026-11-19",
           "rate": 159.97
+        },
+        {
+          "date": "2026-11-20",
+          "rate": 158.64
         }
       ],
       "7_day_history": [
-        {
-          "date": "2026-11-11",
-          "rate": 159.23
-        },
         {
           "date": "2026-11-12",
           "rate": 159.7
@@ -1116,6 +1120,10 @@
         {
           "date": "2026-11-19",
           "rate": 159.97
+        },
+        {
+          "date": "2026-11-20",
+          "rate": 158.64
         }
       ]
     }
@@ -1124,9 +1132,104 @@
     "cts_airport_notices": "Normal operations. No emergency notices found.",
     "jr_hokkaido_trains": "Operations appear normal based on homepage check.",
     "road_trip_status": {
-      "error": "HTTPSConnectionPool(host='api.openrouteservice.org', port=443): Max retries exceeded with url: /v2/directions/driving-car (Caused by NewConnectionError(\"HTTPSConnection(host='api.openrouteservice.org', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))"
+      "total_distance_km": 479.3,
+      "total_duration_mins": 411,
+      "total_ascent_m": 7274,
+      "total_descent_m": 7268,
+      "legs": [
+        {
+          "from": "New Chitose Airport",
+          "to": "Shikotsu Mizu no Uta",
+          "distance_km": 31.6,
+          "duration_mins": 32,
+          "total_ascent_m": 370,
+          "total_descent_m": 146
+        },
+        {
+          "from": "Shikotsu Mizu no Uta",
+          "to": "Niseko Northern Resort",
+          "distance_km": 88.6,
+          "duration_mins": 81,
+          "total_ascent_m": 1679,
+          "total_descent_m": 1629
+        },
+        {
+          "from": "Niseko Northern Resort",
+          "to": "Grids Premium Otaru",
+          "distance_km": 79.0,
+          "duration_mins": 65,
+          "total_ascent_m": 1388,
+          "total_descent_m": 1656
+        },
+        {
+          "from": "Grids Premium Otaru",
+          "to": "Furano La Terre",
+          "distance_km": 157.5,
+          "duration_mins": 128,
+          "total_ascent_m": 2256,
+          "total_descent_m": 2112
+        },
+        {
+          "from": "Furano La Terre",
+          "to": "Sapporo Susukino",
+          "distance_km": 122.7,
+          "duration_mins": 105,
+          "total_ascent_m": 1580,
+          "total_descent_m": 1725
+        }
+      ],
+      "note": "Open-source routing does not support real-time traffic delays."
     },
-    "daily_commutes": []
+    "daily_commutes": [
+      {
+        "from": "Niseko Northern Resort",
+        "to": "Niseko Moiwa",
+        "distance_km": 0.5,
+        "duration_mins": 1
+      },
+      {
+        "from": "Niseko Northern Resort",
+        "to": "Rusutsu Resort",
+        "distance_km": 29.3,
+        "duration_mins": 35
+      },
+      {
+        "from": "Grids Premium Otaru",
+        "to": "Kiroro Snow World",
+        "distance_km": 27.8,
+        "duration_mins": 23
+      },
+      {
+        "from": "Furano La Terre",
+        "to": "Kamui Ski Links",
+        "distance_km": 62.9,
+        "duration_mins": 78
+      },
+      {
+        "from": "Furano La Terre",
+        "to": "Furano Ski Resort",
+        "distance_km": 14.3,
+        "duration_mins": 13
+      },
+      {
+        "from": "Furano La Terre",
+        "to": "Asahikawa Town",
+        "distance_km": 46.5,
+        "duration_mins": 45
+      },
+      {
+        "from": "Sapporo Susukino",
+        "to": "Sapporo Teine",
+        "distance_km": 23.4,
+        "duration_mins": 27
+      },
+      {
+        "from": "Sapporo Susukino",
+        "to": "Sapporo Kokusai",
+        "distance_km": 47.2,
+        "duration_mins": 50
+      }
+    ]
   },
   "mountain_safety": {
     "official_jma_warnings": "⚠️ ACTIVE JMA WARNINGS (Hokkaido Route): Avalanche Advisory. Please check the official JMA website.",
@@ -1141,100 +1244,100 @@
   },
   "resorts": {
     "Niseko Tokyu Grand Hirafu": {
-      "temp_celsius": "N/A",
-      "24h_snowfall_cm": "N/A",
-      "base_depth_cm": 0,
-      "wind_speed_kmh": "N/A",
-      "visibility_meters": "N/A",
-      "freezing_level_m": "N/A",
-      "cloud_cover_percent": "N/A",
-      "uv_index": "N/A",
-      "sunrise": "N/A",
-      "sunset": "N/A"
+      "temp_celsius": -1.5,
+      "24h_snowfall_cm": 6.37,
+      "base_depth_cm": 19,
+      "wind_speed_kmh": 10.6,
+      "visibility_meters": 3520.0,
+      "freezing_level_m": 230.0,
+      "cloud_cover_percent": 99,
+      "uv_index": 0.0,
+      "sunrise": "2026-11-21T06:36",
+      "sunset": "2026-11-21T16:09"
     },
     "Niseko Moiwa Ski Resort": {
-      "temp_celsius": "N/A",
-      "24h_snowfall_cm": "N/A",
-      "base_depth_cm": 0,
-      "wind_speed_kmh": "N/A",
-      "visibility_meters": "N/A",
-      "freezing_level_m": "N/A",
-      "cloud_cover_percent": "N/A",
-      "uv_index": "N/A",
-      "sunrise": "N/A",
-      "sunset": "N/A"
+      "temp_celsius": -1.5,
+      "24h_snowfall_cm": 6.37,
+      "base_depth_cm": 19,
+      "wind_speed_kmh": 10.6,
+      "visibility_meters": 3520.0,
+      "freezing_level_m": 210.0,
+      "cloud_cover_percent": 99,
+      "uv_index": 0.0,
+      "sunrise": "2026-11-21T06:36",
+      "sunset": "2026-11-21T16:09"
     },
     "Rusutsu Resort": {
-      "temp_celsius": "N/A",
-      "24h_snowfall_cm": "N/A",
-      "base_depth_cm": 0,
-      "wind_speed_kmh": "N/A",
-      "visibility_meters": "N/A",
-      "freezing_level_m": "N/A",
-      "cloud_cover_percent": "N/A",
-      "uv_index": "N/A",
-      "sunrise": "N/A",
-      "sunset": "N/A"
+      "temp_celsius": -2.6,
+      "24h_snowfall_cm": 3.43,
+      "base_depth_cm": 10,
+      "wind_speed_kmh": 10.9,
+      "visibility_meters": 2960.0,
+      "freezing_level_m": 170.0,
+      "cloud_cover_percent": 100,
+      "uv_index": 0.0,
+      "sunrise": "2026-11-21T06:34",
+      "sunset": "2026-11-21T16:09"
     },
     "Kiroro Snow World": {
-      "temp_celsius": "N/A",
-      "24h_snowfall_cm": "N/A",
-      "base_depth_cm": 0,
-      "wind_speed_kmh": "N/A",
-      "visibility_meters": "N/A",
-      "freezing_level_m": "N/A",
-      "cloud_cover_percent": "N/A",
-      "uv_index": "N/A",
-      "sunrise": "N/A",
-      "sunset": "N/A"
+      "temp_celsius": -3.0,
+      "24h_snowfall_cm": 10.85,
+      "base_depth_cm": 19,
+      "wind_speed_kmh": 20.7,
+      "visibility_meters": 1940.0,
+      "freezing_level_m": 480.0,
+      "cloud_cover_percent": 100,
+      "uv_index": 0.0,
+      "sunrise": "2026-11-21T06:35",
+      "sunset": "2026-11-21T16:07"
     },
     "Kamui Ski Links": {
-      "temp_celsius": "N/A",
-      "24h_snowfall_cm": "N/A",
-      "base_depth_cm": 0,
-      "wind_speed_kmh": "N/A",
-      "visibility_meters": "N/A",
-      "freezing_level_m": "N/A",
-      "cloud_cover_percent": "N/A",
-      "uv_index": "N/A",
-      "sunrise": "N/A",
-      "sunset": "N/A"
+      "temp_celsius": -5.4,
+      "24h_snowfall_cm": 1.12,
+      "base_depth_cm": 12,
+      "wind_speed_kmh": 5.3,
+      "visibility_meters": 41100.0,
+      "freezing_level_m": -10.0,
+      "cloud_cover_percent": 25,
+      "uv_index": 0.0,
+      "sunrise": "2026-11-21T06:32",
+      "sunset": "2026-11-21T16:00"
     },
     "Furano Ski Resort": {
-      "temp_celsius": "N/A",
-      "24h_snowfall_cm": "N/A",
-      "base_depth_cm": 0,
-      "wind_speed_kmh": "N/A",
-      "visibility_meters": "N/A",
-      "freezing_level_m": "N/A",
-      "cloud_cover_percent": "N/A",
-      "uv_index": "N/A",
-      "sunrise": "N/A",
-      "sunset": "N/A"
+      "temp_celsius": -6.7,
+      "24h_snowfall_cm": 0.91,
+      "base_depth_cm": 8,
+      "wind_speed_kmh": 10.4,
+      "visibility_meters": 22880.0,
+      "freezing_level_m": 240.0,
+      "cloud_cover_percent": 100,
+      "uv_index": 0.0,
+      "sunrise": "2026-11-21T06:30",
+      "sunset": "2026-11-21T16:01"
     },
     "Sapporo Teine": {
-      "temp_celsius": "N/A",
-      "24h_snowfall_cm": "N/A",
-      "base_depth_cm": 0,
-      "wind_speed_kmh": "N/A",
-      "visibility_meters": "N/A",
-      "freezing_level_m": "N/A",
-      "cloud_cover_percent": "N/A",
-      "uv_index": "N/A",
-      "sunrise": "N/A",
-      "sunset": "N/A"
+      "temp_celsius": 0.2,
+      "24h_snowfall_cm": 5.32,
+      "base_depth_cm": 8,
+      "wind_speed_kmh": 25.6,
+      "visibility_meters": 3440.0,
+      "freezing_level_m": 330.0,
+      "cloud_cover_percent": 97,
+      "uv_index": 0.0,
+      "sunrise": "2026-11-21T06:34",
+      "sunset": "2026-11-21T16:06"
     },
     "Sapporo Kokusai": {
-      "temp_celsius": "N/A",
-      "24h_snowfall_cm": "N/A",
-      "base_depth_cm": 0,
-      "wind_speed_kmh": "N/A",
-      "visibility_meters": "N/A",
-      "freezing_level_m": "N/A",
-      "cloud_cover_percent": "N/A",
-      "uv_index": "N/A",
-      "sunrise": "N/A",
-      "sunset": "N/A"
+      "temp_celsius": -4.4,
+      "24h_snowfall_cm": 12.04,
+      "base_depth_cm": 23,
+      "wind_speed_kmh": 18.4,
+      "visibility_meters": 560.0,
+      "freezing_level_m": 480.0,
+      "cloud_cover_percent": 100,
+      "uv_index": 0.0,
+      "sunrise": "2026-11-21T06:35",
+      "sunset": "2026-11-21T16:07"
     }
   },
   "lift_status": {
