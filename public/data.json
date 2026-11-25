@@ -1,13 +1,9 @@
 {
-  "last_updated_utc": "2026-11-24T14:37:24.591440+00:00",
+  "last_updated_utc": "2026-11-25T00:24:43.939339+00:00",
   "currency": {
     "CAD_to_JPY": {
-      "latest_rate": 110.76,
+      "latest_rate": 111.03,
       "6_month_history": [
-        {
-          "date": "2026-05-25",
-          "rate": 115.06
-        },
         {
           "date": "2026-05-26",
           "rate": 115.27
@@ -527,13 +523,13 @@
         {
           "date": "2026-11-23",
           "rate": 110.76
+        },
+        {
+          "date": "2026-11-24",
+          "rate": 111.03
         }
       ],
       "7_day_history": [
-        {
-          "date": "2026-11-13",
-          "rate": 112.22
-        },
         {
           "date": "2026-11-16",
           "rate": 111.72
@@ -557,16 +553,16 @@
         {
           "date": "2026-11-23",
           "rate": 110.76
+        },
+        {
+          "date": "2026-11-24",
+          "rate": 111.03
         }
       ]
     },
     "USD_to_JPY": {
       "latest_rate": 159.07,
       "6_month_history": [
-        {
-          "date": "2026-05-25",
-          "rate": 158.93
-        },
         {
           "date": "2026-05-26",
           "rate": 159.21
@@ -1086,13 +1082,13 @@
         {
           "date": "2026-11-23",
           "rate": 159.07
+        },
+        {
+          "date": "2026-11-24",
+          "rate": 159.07
         }
       ],
       "7_day_history": [
-        {
-          "date": "2026-11-13",
-          "rate": 160.0
-        },
         {
           "date": "2026-11-16",
           "rate": 159.6
@@ -1116,6 +1112,10 @@
         {
           "date": "2026-11-23",
           "rate": 159.07
+        },
+        {
+          "date": "2026-11-24",
+          "rate": 159.07
         }
       ]
     }
@@ -1124,104 +1124,10 @@
     "cts_airport_notices": "Normal operations. No emergency notices found.",
     "jr_hokkaido_trains": "Operations appear normal based on homepage check.",
     "road_trip_status": {
-      "total_distance_km": 479.3,
-      "total_duration_mins": 411,
-      "total_ascent_m": 7274,
-      "total_descent_m": 7268,
-      "legs": [
-        {
-          "from": "New Chitose Airport",
-          "to": "Shikotsu Mizu no Uta",
-          "distance_km": 31.6,
-          "duration_mins": 32,
-          "total_ascent_m": 370,
-          "total_descent_m": 146
-        },
-        {
-          "from": "Shikotsu Mizu no Uta",
-          "to": "Niseko Northern Resort",
-          "distance_km": 88.6,
-          "duration_mins": 81,
-          "total_ascent_m": 1679,
-          "total_descent_m": 1629
-        },
-        {
-          "from": "Niseko Northern Resort",
-          "to": "Grids Premium Otaru",
-          "distance_km": 79.0,
-          "duration_mins": 65,
-          "total_ascent_m": 1388,
-          "total_descent_m": 1656
-        },
-        {
-          "from": "Grids Premium Otaru",
-          "to": "Furano La Terre",
-          "distance_km": 157.5,
-          "duration_mins": 128,
-          "total_ascent_m": 2256,
-          "total_descent_m": 2112
-        },
-        {
-          "from": "Furano La Terre",
-          "to": "Sapporo Susukino",
-          "distance_km": 122.7,
-          "duration_mins": 105,
-          "total_ascent_m": 1580,
-          "total_descent_m": 1725
-        }
-      ],
-      "note": "Open-source routing does not support real-time traffic delays."
+      "error": "API Status 410",
+      "details": "<html lang=\"en\">\n<head>\n    <meta http-equiv=\"content-type\" content=\"text/html; charset=windows-1252\">\n    <title>Deprecated HeiGIT API URL</title>\n    <style>\n        body, html {\n            width: 100%;\n            height: 100%;\n            background-color: #21232a;\n            margin: 0;\n        }\n\n        body {\n            width: 100%;\n            height: 100%;\n            font-family: \"Open Sans\", \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n            color: #CBCBCB;\n            text-align: center;\n            /*box-shadow: inset 0 0 100px rgba(0, 0, 0, .8);*/\n            line-height: 1.30;\n        }\n\n        .title {\n            font-size: 28pt;\n            padding-top: 50px;\n            padding-bottom: 50px;\n            font-weight: bold;\n            color: white;\n        }\n\n        h1 {\n            font-size: 28pt;\n            padding-top: 50px;\n            padding-bottom: 50px;\n            font-weight: bold;\n            color: white;\n        }\n\n        .content {\n            text-align: left;\n            padding-left: 30%;\n            padding-right: 30%;\n        }\n\n        .list {\n            padding-top: 10px;\n            padding-left: 10%;\n            padding-right: 10%;\n\t    padding-bottom: 30px;\n        }\n\n        .footer {\n            font-size: 12px;\n            text-align: center;\n            /*position: absolute;*/\n            width: 100%;\n            height: 60px;\n            bottom: 0;\n        }\n\n\tcode {\n\t    font-family: mono;\n\t    background: #cbcbcb;\n\t    color: rgb(181, 21, 43);\n\t    padding: 0 3px;\n\t    border-radius: .2rem;\n\t}\n\n        a {\n            color: rgb(181, 21, 43);\n            /*text-shadow: 0 1px 1px rgba(221, 51, 51, .5);*/\n            text-decoration: underline;\n\n\n        }\n\n\tli:first-of-type {\n\t    padding-top: 0px;\n\t}\n\n        li {\n            padding-top: 20px;\n        }\n\n\t.warning {\n\t\tpadding: 20px;\n\t\tbackground-color: #f44336; /* Red */\n\t\tcolor: white;\n\t\tmargin-bottom: 15px;\n\t}\n\n    </style>\n</head>\n<body>\n\t<div class=\"warning\">\n\t\tThe URL api.openrouteservice.org has been <a href=\"https://ask.openrouteservice.org/t/deprecating-api-openrouteservice-org-in-favour-of-api-heigit-org/7912\">deprecated since 2026-04-28</a>.\n\t\tAs of 2026-11-24, it is not available anymore.\n\n\t</div>\n\t<h1>410: GONE - where did api.openrouteservice.org go?</h1>\n\n\t<div class=\"content\">\n\t\t<p>In an ongoing effort of moving to a unified structure for all existing and future HeiGIT APIs, the URL <code>api.openrouteservice.org</code> has been <b>deprecated</b> in favour of <code>api.heigit.org</code>.</p>\n\n\t\t<p>All <b>technical details</b> can be found in <a href=\"https://ask.openrouteservice.org/t/deprecating-api-openrouteservice-org-in-favour-of-api-heigit-org/7912\">the corresponding ORS Ask-Forum entry</a>.</p>\n\n\t\t<p>You can find some <b>background on the changes</b> in the openrouteservice universe <a href=\"https://heigit.org/changes-in-the-openrouteservice-universe/\">on the HeiGIT Website</a>.</p>\n\n\t\t<p>Documentation on how to <b>use the new API</b> can be found here:</p>\n\n\t<ul class=\"list\">\n        <li><a href=\"https://openrouteservice.org/dev/#/api-docs\" target=\"_blank\">Interactive openrouteservice documentation</a> - full\n\t\t\tdocumentation of the openrouteservice API\n\t<li><a href=\"https://docs.ohsome.org/ohsome-api/\" target=\"_blank\">ohsome API docs</a> - full documentation\n\t    for HeiGIT's HTTP API for OpenStreetMap history statistics and extractions\n\t</li>\n\t<li><a href=\"https://api.heigit.org/docs/?urls.primaryName=ohsome+API\" target=\"_blank\">ohsome quality API docs</a> - HeiGIT's\n\t    HTTP API for OpenStreetMap data quality analysis\n\t</li>\n\t</ul>\n\n</div>\n<div class=\"footer\">\n\t&copy; 2024 - today HeiGIT gGmbH | Services developed by <a href=\"https://heigit.org/\" target=\"_blank\" style=\"\">HeiGIT gGmbH</a> | <a href=\"https://heigit.org/imprint\">Imprint</a> | <a href=\"https://heigit.org/privacy-policy\">Privacy Policy</a>\n</div>\n</body>\n<style type=\"text/css\"></style>\n</html>\n"
     },
-    "daily_commutes": [
-      {
-        "from": "Niseko Northern Resort",
-        "to": "Niseko Moiwa",
-        "distance_km": 0.5,
-        "duration_mins": 1
-      },
-      {
-        "from": "Niseko Northern Resort",
-        "to": "Rusutsu Resort",
-        "distance_km": 29.3,
-        "duration_mins": 35
-      },
-      {
-        "from": "Grids Premium Otaru",
-        "to": "Kiroro Snow World",
-        "distance_km": 27.8,
-        "duration_mins": 23
-      },
-      {
-        "from": "Furano La Terre",
-        "to": "Kamui Ski Links",
-        "distance_km": 62.9,
-        "duration_mins": 78
-      },
-      {
-        "from": "Furano La Terre",
-        "to": "Furano Ski Resort",
-        "distance_km": 14.3,
-        "duration_mins": 13
-      },
-      {
-        "from": "Furano La Terre",
-        "to": "Asahikawa Town",
-        "distance_km": 46.5,
-        "duration_mins": 45
-      },
-      {
-        "from": "Sapporo Susukino",
-        "to": "Sapporo Teine",
-        "distance_km": 23.4,
-        "duration_mins": 27
-      },
-      {
-        "from": "Sapporo Susukino",
-        "to": "Sapporo Kokusai",
-        "distance_km": 47.2,
-        "duration_mins": 50
-      }
-    ]
+    "daily_commutes": []
   },
   "mountain_safety": {
     "official_jma_warnings": "⚠️ ACTIVE JMA WARNINGS (Hokkaido Route): Avalanche Advisory. Please check the official JMA website.",
@@ -1236,100 +1142,100 @@
   },
   "resorts": {
     "Niseko Tokyu Grand Hirafu": {
-      "temp_celsius": -5.7,
-      "24h_snowfall_cm": 2.31,
+      "temp_celsius": -5.0,
+      "24h_snowfall_cm": 7.42,
       "base_depth_cm": 13,
-      "wind_speed_kmh": 8.1,
-      "visibility_meters": 4740.0,
-      "freezing_level_m": 60.0,
-      "cloud_cover_percent": 89,
-      "uv_index": 0.0,
-      "sunrise": "2026-11-24T06:39",
-      "sunset": "2026-11-24T16:07"
+      "wind_speed_kmh": 13.9,
+      "visibility_meters": 9200.0,
+      "freezing_level_m": 30.0,
+      "cloud_cover_percent": 93,
+      "uv_index": 0.95,
+      "sunrise": "2026-11-25T06:40",
+      "sunset": "2026-11-25T16:07"
     },
     "Niseko Moiwa Ski Resort": {
-      "temp_celsius": -5.7,
-      "24h_snowfall_cm": 2.31,
+      "temp_celsius": -5.0,
+      "24h_snowfall_cm": 7.42,
       "base_depth_cm": 13,
-      "wind_speed_kmh": 8.1,
-      "visibility_meters": 4740.0,
-      "freezing_level_m": 50.0,
-      "cloud_cover_percent": 89,
-      "uv_index": 0.0,
-      "sunrise": "2026-11-24T06:39",
-      "sunset": "2026-11-24T16:07"
+      "wind_speed_kmh": 13.9,
+      "visibility_meters": 9200.0,
+      "freezing_level_m": 10.0,
+      "cloud_cover_percent": 93,
+      "uv_index": 0.8,
+      "sunrise": "2026-11-25T06:40",
+      "sunset": "2026-11-25T16:07"
     },
     "Rusutsu Resort": {
-      "temp_celsius": -4.5,
-      "24h_snowfall_cm": 0.0,
-      "base_depth_cm": 1,
-      "wind_speed_kmh": 8.1,
-      "visibility_meters": 13600.0,
-      "freezing_level_m": 80.0,
-      "cloud_cover_percent": 33,
-      "uv_index": 0.0,
-      "sunrise": "2026-11-24T06:38",
-      "sunset": "2026-11-24T16:07"
+      "temp_celsius": -4.7,
+      "24h_snowfall_cm": 3.57,
+      "base_depth_cm": 2,
+      "wind_speed_kmh": 15.1,
+      "visibility_meters": 8100.0,
+      "freezing_level_m": 40.0,
+      "cloud_cover_percent": 49,
+      "uv_index": 0.95,
+      "sunrise": "2026-11-25T06:39",
+      "sunset": "2026-11-25T16:06"
     },
     "Kiroro Snow World": {
-      "temp_celsius": -7.1,
-      "24h_snowfall_cm": 1.75,
-      "base_depth_cm": 15,
-      "wind_speed_kmh": 11.4,
-      "visibility_meters": 5800.0,
-      "freezing_level_m": 220.0,
-      "cloud_cover_percent": 67,
-      "uv_index": 0.0,
-      "sunrise": "2026-11-24T06:39",
-      "sunset": "2026-11-24T16:05"
+      "temp_celsius": -6.2,
+      "24h_snowfall_cm": 2.24,
+      "base_depth_cm": 14,
+      "wind_speed_kmh": 20.3,
+      "visibility_meters": 12900.0,
+      "freezing_level_m": 170.0,
+      "cloud_cover_percent": 55,
+      "uv_index": 0.95,
+      "sunrise": "2026-11-25T06:40",
+      "sunset": "2026-11-25T16:05"
     },
     "Kamui Ski Links": {
-      "temp_celsius": -3.7,
-      "24h_snowfall_cm": 2.03,
+      "temp_celsius": -3.8,
+      "24h_snowfall_cm": 2.38,
       "base_depth_cm": 5,
-      "wind_speed_kmh": 9.3,
-      "visibility_meters": 8040.0,
-      "freezing_level_m": 30.0,
-      "cloud_cover_percent": 83,
-      "uv_index": 0.0,
-      "sunrise": "2026-11-24T06:36",
-      "sunset": "2026-11-24T15:58"
+      "wind_speed_kmh": 14.8,
+      "visibility_meters": 19200.0,
+      "freezing_level_m": -40.0,
+      "cloud_cover_percent": 76,
+      "uv_index": 1.25,
+      "sunrise": "2026-11-25T06:37",
+      "sunset": "2026-11-25T15:57"
     },
     "Furano Ski Resort": {
-      "temp_celsius": -7.0,
-      "24h_snowfall_cm": 4.27,
-      "base_depth_cm": 4,
-      "wind_speed_kmh": 10.6,
-      "visibility_meters": 2400.0,
-      "freezing_level_m": 150.0,
-      "cloud_cover_percent": 91,
-      "uv_index": 0.0,
-      "sunrise": "2026-11-24T06:34",
-      "sunset": "2026-11-24T15:59"
+      "temp_celsius": -8.0,
+      "24h_snowfall_cm": 2.94,
+      "base_depth_cm": 5,
+      "wind_speed_kmh": 16.5,
+      "visibility_meters": 8000.0,
+      "freezing_level_m": 50.0,
+      "cloud_cover_percent": 89,
+      "uv_index": 1.1,
+      "sunrise": "2026-11-25T06:35",
+      "sunset": "2026-11-25T15:59"
     },
     "Sapporo Teine": {
-      "temp_celsius": -2.4,
-      "24h_snowfall_cm": 0.07,
-      "base_depth_cm": 0,
-      "wind_speed_kmh": 20.5,
-      "visibility_meters": 4420.0,
-      "freezing_level_m": 90.0,
-      "cloud_cover_percent": 48,
-      "uv_index": 0.0,
-      "sunrise": "2026-11-24T06:38",
-      "sunset": "2026-11-24T16:04"
+      "temp_celsius": -3.4,
+      "24h_snowfall_cm": 2.94,
+      "base_depth_cm": 1,
+      "wind_speed_kmh": 22.5,
+      "visibility_meters": 14660.0,
+      "freezing_level_m": 50.0,
+      "cloud_cover_percent": 27,
+      "uv_index": 1.25,
+      "sunrise": "2026-11-25T06:39",
+      "sunset": "2026-11-25T16:04"
     },
     "Sapporo Kokusai": {
-      "temp_celsius": -9.6,
-      "24h_snowfall_cm": 5.81,
-      "base_depth_cm": 24,
-      "wind_speed_kmh": 9.5,
-      "visibility_meters": 2340.0,
-      "freezing_level_m": 220.0,
-      "cloud_cover_percent": 91,
-      "uv_index": 0.0,
-      "sunrise": "2026-11-24T06:38",
-      "sunset": "2026-11-24T16:05"
+      "temp_celsius": -8.5,
+      "24h_snowfall_cm": 4.55,
+      "base_depth_cm": 25,
+      "wind_speed_kmh": 20.1,
+      "visibility_meters": 7340.0,
+      "freezing_level_m": 170.0,
+      "cloud_cover_percent": 62,
+      "uv_index": 1.1,
+      "sunrise": "2026-11-25T06:40",
+      "sunset": "2026-11-25T16:05"
     }
   },
   "lift_status": {
